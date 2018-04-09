@@ -3,18 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
+import { HttpClientModule }    from '@angular/common/http';
 
+import { AppComponent } from './app.component';
+import { CinemaTheatreComponent } from './components/cinema-theatre/cinema-theatre.component';
+import { CinemaTheatreService} from './services/cinema-theatre/cinema-theatre.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CinemaTheatreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CinemaTheatreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

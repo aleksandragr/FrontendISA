@@ -7,12 +7,15 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CinemaTheatreComponent } from './components/cinema-theatre/cinema-theatre.component';
+import {WelcomepageComponent } from './components/welcomepage/welcomepage.component';
 import { CinemaTheatreService} from './services/cinema-theatre/cinema-theatre.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CinemaTheatreComponent
+    CinemaTheatreComponent,
+    WelcomepageComponent
   ],
   imports: [
     BrowserModule,

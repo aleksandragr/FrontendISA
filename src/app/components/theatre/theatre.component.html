@@ -1,3 +1,13 @@
-<p>
-  theatre works!
-</p>
+<div>
+
+  <div class="col">
+    <h2 align="center" class="header">Theaters</h2>
+  </div>
+
+    <ul *ngFor="let theatre of theatres" type="square" class="ul" > 
+      <li><p><span class="theatre1"> {{theatre.name}}</span> <br> <span class="theatre2">({{theatre.address}}, {{theatre.description}}, {{theatre.rating}})  </span> </p> </li>
+        
+    </ul>
+    
+  
+</div>

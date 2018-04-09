@@ -8,8 +8,10 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CinemaComponent } from './components/cinema/cinema.component';
 import {WelcomepageComponent } from './components/welcomepage/welcomepage.component';
-import { CinemaService} from './services/cinema/cinema.service';
 import { TheatreComponent } from './components/theatre/theatre.component';
+
+import { CinemaService} from './services/cinema/cinema.service';
+import { TheatreService} from './services/theatre/theatre.service';
 
 
 @NgModule({
@@ -24,7 +26,7 @@ import { TheatreComponent } from './components/theatre/theatre.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CinemaService],
+  providers: [CinemaService, TheatreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

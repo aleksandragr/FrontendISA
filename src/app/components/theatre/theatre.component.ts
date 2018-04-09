@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Theatre } from '../../theatre';
+import { TheatreService } from '../../services/theatre/theatre.service';
 
 @Component({
   selector: 'app-theatre',
@@ -11,9 +12,13 @@ export class TheatreComponent implements OnInit {
 
   theatres: Theatre[];
 
-  constructor() { }
+  constructor(private theatreService: TheatreService) { }
 
   ngOnInit() {
+
+    this.theatreService.getTheatres()
+    .subscribe(theatres => this.theatres=theatres);
+
   }
 
 }

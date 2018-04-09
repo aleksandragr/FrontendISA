@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { CinemaComponent } from './components/cinema/cinema.component';
 import {WelcomepageComponent } from './components/welcomepage/welcomepage.component';
 import { CinemaService} from './services/cinema/cinema.service';
+import { TheatreComponent } from './components/theatre/theatre.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CinemaComponent,
-    WelcomepageComponent
+    WelcomepageComponent,
+    TheatreComponent
   ],
   imports: [
     BrowserModule,

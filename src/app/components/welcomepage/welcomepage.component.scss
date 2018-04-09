@@ -1,11 +1,60 @@
 .header{
     font-family: inherit;
     font-size: 1.3cm;
-    color: #03095c;
+    color:rgb(220, 230, 235);
+    border:inset 2px;
 }
 
 .link1{
     font-family: monospace;
     font-size: 1.0cm;
     color: #080977;
+}
+
+.col {
+    margin:0em 20em 0em 20em;
+    background: #2885C4;
+}
+
+.container{
+    border:groove   3px;
+    display: inline-block;
+    margin-left: 27em;
+    margin-top: 7em;
+    background:#57B3F1;
+    padding: 1em 1em;
+    text-align:justify;
+}
+
+.containerr{
+    border:groove  3px;
+    display: inline-block;
+    background:#57B3F1;
+    padding: 1em 1em;
+}
+
+.space{
+    display: inline-block;
+    background:#57B3F1;
+    width: 15em;
+}
+
+.imageCinema{
+   
+    display: inline-block;
+    margin-left: 26em; 
+    margin-top: 2em;
+}
+
+.imageTheatre{
+   
+    display: inline-block;
+     
+    
+}
+
+.space1{
+    display: inline-block;
+    background:#57B3F1;
+    width: 13em;
 }

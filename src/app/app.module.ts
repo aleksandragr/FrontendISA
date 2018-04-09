@@ -6,15 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule }    from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CinemaTheatreComponent } from './components/cinema-theatre/cinema-theatre.component';
+import { CinemaComponent } from './components/cinema/cinema.component';
 import {WelcomepageComponent } from './components/welcomepage/welcomepage.component';
-import { CinemaTheatreService} from './services/cinema-theatre/cinema-theatre.service';
+import { CinemaService} from './services/cinema/cinema.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CinemaTheatreComponent,
+    CinemaComponent,
     WelcomepageComponent
   ],
   imports: [
@@ -22,7 +22,7 @@ import { CinemaTheatreService} from './services/cinema-theatre/cinema-theatre.se
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CinemaTheatreService],
+  providers: [CinemaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

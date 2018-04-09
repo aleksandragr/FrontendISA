@@ -1,4 +1,4 @@
-export class CinemaTheatre{
+export class Cinema{
 
     id: number;
     address: string;

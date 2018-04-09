@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-import { CinemaTheatreComponent } from './components/cinema-theatre/cinema-theatre.component';
+import { CinemaComponent } from './components/cinema/cinema.component';
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component';
 
 
@@ -10,9 +10,9 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
 
 const routes: Routes = [
  
-  { path: 'cinemas', component: CinemaTheatreComponent},
+  { path: 'cinemas', component: CinemaComponent},
   { path: '', component: WelcomepageComponent}
-  
+
 ];
 
 @NgModule({

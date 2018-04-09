@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CinemaTheatre } from '../../cinema-theatre';
+import { Cinema } from '../../cinema';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
@@ -9,7 +9,7 @@ const httpOptions = {
 };
 
 @Injectable()
-export class CinemaTheatreService {
+export class CinemaService {
 
   constructor(private http: HttpClient) { }
 

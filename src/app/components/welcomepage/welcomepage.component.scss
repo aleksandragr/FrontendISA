@@ -3,17 +3,55 @@
     font-size: 1.3cm;
     color:rgb(220, 230, 235);
     border:inset 2px;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.col {
+    background: #2885C4;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 20em;
+    width: 900px;
+}
+
+.login{
+    display: inline-block;
+    
+    margin-top: 0cm;
+}
+
+.loginText{
+    font-family: monospace;
+    font-size: 0.9cm;
+    color: #080977;
+    
+    padding-top: 60px;
+}
+
+.space2{
+    display: inline-block;
+    background:#57B3F1;
+    width: 10em;
+}
+
+.space3{
+    display: inline-block;
+    background:#57B3F1;
+    height: 1.5em;
+}
+
+.button{
+    font-size: 0.5cm;
+    width: 123px;
+    padding-left: 5px;
+    background-color: #ff751a;
 }
 
 .link1{
     font-family: monospace;
     font-size: 1.0cm;
     color: #080977;
-}
-
-.col {
-    margin:0em 20em 0em 20em;
-    background: #2885C4;
 }
 
 .container{
@@ -58,3 +96,4 @@
     background:#57B3F1;
     width: 13em;
 }
+

@@ -13,6 +13,7 @@ import { TheatreComponent } from './components/theatre/theatre.component';
 import { CinemaService} from './services/cinema/cinema.service';
 import { TheatreService} from './services/theatre/theatre.service';
 import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { LoginComponent } from './components/login/login.component';
     CinemaComponent,
     WelcomepageComponent,
     TheatreComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

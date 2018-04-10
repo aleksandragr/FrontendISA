@@ -21,6 +21,12 @@ export class UserService {
 
   }
 
+  registerUser (user: User): Observable<any>{
+
+    return this.http.put<any>('http://localhost:4567/user/registration', user, httpOptions);
+
+  }
+
 
 
 }

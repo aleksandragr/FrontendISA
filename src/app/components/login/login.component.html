@@ -4,18 +4,18 @@
     <h1 class="header">Login</h1>
   </div>
 
-  <form action="">
+  <form (ngSubmit)="login">
   <div class="poz">
     <div class="div">
       <p class="Text">Email:</p>
-      <input class="input" type="text" placeholder="Email" name="email">
+      <input class="input" type="text" [(ngModel)]="userl.email" placeholder="Email" name="email" #email1 required>
     </div>
     <div class="div">
-      <p class="Text">Password:</p>
-      <input class="input" type="text" placeholder="Password" name="password">
+      <p class="Text">Password:</p> 
+      <input type="password" class="input" [(ngModel)]="userl.password" placeholder="Password" name="password" #password1 required>
     </div>
 
-    <input class="submit" type="submit" value="Submit">
+    <input class="submit" type="submit" value="Submit" (click)="login(); email1.value=''; password1.value=''">
     <button class="button" onclick="location.href='/login'">Registration</button>
   </div>
   </form>

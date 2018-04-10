@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent},
   { path: 'dashboard', component: DashboardComponent,
     children:[
-      {path: 'homepage', component: HomepageComponent}
+      {path: '', component: HomepageComponent},
+      {path: 'homepage', component: HomepageComponent},
+      { path: 'cinemas', component: CinemaComponent}
     ]
 
 

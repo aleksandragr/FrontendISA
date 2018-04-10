@@ -5,48 +5,48 @@
   </div>
   <hr>
 
-  <form action="">
+  <form (ngSubmit)="register">
     <div class="poz">
    
-          <div>
+          <div class="div">
             <p class="text">Email:</p>
-            <input class="input" type="text" placeholder="Email" name="email">
+            <input class="input" type="text" [(ngModel)]="userr.email"  placeholder="Email" name="email" #emailr required>
           </div>
      
-          <div>
+          <div class="div">
             <p class="text">Password:</p>
-            <input class="input" type="password" placeholder="Password" name="password">
+            <input class="input" type="password" [(ngModel)]="userr.newPassword"  placeholder="Password" name="password" #newPassr required>
           </div>
      
-          <div >
+          <div class="div">
             <p class="text">Repeat password:</p>
-            <input class="input" type="password" placeholder="Repeat password" name="repeatpassword">
+            <input class="input" type="password" [(ngModel)]="userr.repeatPassword"   placeholder="Repeat password" name="repeatpassword" #repeatPassr required>
           </div>
      
-          <div >
+          <div class="div">
             <p class="text">Name:</p>
-            <input class="input" type="text" placeholder="Name" name="name">  
+            <input class="input" type="text" [(ngModel)]="userr.name"   placeholder="Name" name="name" #namer required>  
           </div>
     
-          <div >
+          <div class="div">
             <p class="text">Surname:</p>
-            <input class="input" type="text" placeholder="Surname" name="surname">
+            <input class="input" type="text" [(ngModel)]="userr.surname"   placeholder="Surname" name="surname" #surnamer required>
           </div>
               
-          <div >
+          <div class="div">
             <p class="text">City:</p>
-            <input class="input" type="text" placeholder="City" name="city">
+            <input class="input" type="text" [(ngModel)]="userr.city"   placeholder="City" name="city" #cityr required>
           </div>
        
-          <div >
+          <div class="div">
             <p class="text">Phone number:</p>
-            <input class="input" type="text" placeholder="Phone number" name="phonenumber">
+            <input class="input" type="text" [(ngModel)]="userr.phoneNumber"  placeholder="Phone number" name="phonenumber" #phoneNumr required>
           </div>
             
       
     </div>
 
-    <input class="submit" type="submit" value="Register">
+    <input class="submit" type="submit" value="Register" onclick="location.href='/login'" (click)="register(); emailr.value=''; newPassr.value=''; repeatPassr.value=''; namer.value=''; surnamer.value=''; cityr.value=''; phoneNumr.value='' " >
     
   </form>
 

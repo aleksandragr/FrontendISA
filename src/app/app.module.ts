@@ -12,9 +12,12 @@ import { TheatreComponent } from './components/theatre/theatre.component';
 
 import { CinemaService} from './services/cinema/cinema.service';
 import { TheatreService} from './services/theatre/theatre.service';
+import { UserService } from './services/user/user.service';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,14 +26,16 @@ import { RegistrationComponent } from './components/registration/registration.co
     WelcomepageComponent,
     TheatreComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
   ],
-  providers: [CinemaService, TheatreService],
+  providers: [CinemaService, TheatreService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

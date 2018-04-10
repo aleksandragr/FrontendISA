@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
@@ -7,6 +7,7 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
 import { TheatreComponent } from './components/theatre/theatre.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'cinemas', component: CinemaComponent},
   { path: 'theatres', component: TheatreComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'registration', component: RegistrationComponent}
+  {path: 'registration', component: RegistrationComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

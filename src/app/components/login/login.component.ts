@@ -3,7 +3,7 @@ import { UserService } from '../../services/user/user.service';
 import { User } from '../../user';
 
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { LoggedinService } from '../../services/loggedin/loggedin.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private userservice: UserService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private loggedin: LoggedinService
     ) { }
 
   ngOnInit() {
@@ -29,9 +30,10 @@ export class LoginComponent implements OnInit {
     this.userservice.loginUser(this.userl)
     .subscribe(user => { this.userl = user;
              this.router.navigate(['/dashboard']);
+             this.loggedin.setLocalStore(user);
+
               },
               error => {
-
                 console.log("neispravna lozinka");
               }
           

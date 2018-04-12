@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { StorageServiceModule } from 'angular-webstorage-service';
+import { Ng2Webstorage } from 'ngx-webstorage';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule }    from '@angular/common/http';
@@ -12,6 +13,7 @@ import { TheatreComponent } from './components/theatre/theatre.component';
 
 import { CinemaService} from './services/cinema/cinema.service';
 import { TheatreService} from './services/theatre/theatre.service';
+import { LoggedinService } from './services/loggedin/loggedin.service';
 import { UserService } from './services/user/user.service';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -35,9 +37,11 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    StorageServiceModule,
+    Ng2Webstorage
   ],
-  providers: [CinemaService, TheatreService, UserService],
+  providers: [CinemaService, TheatreService, UserService,LoggedinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

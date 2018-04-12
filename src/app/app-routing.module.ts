@@ -17,6 +17,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 const routes: Routes = [
  
   { path: '', component: WelcomepageComponent},
+  { path: 'welcomepage', component: WelcomepageComponent},
   { path: 'cinemas', component: CinemaComponent},
   { path: 'theatres', component: TheatreComponent},
   { path: 'login', component: LoginComponent},

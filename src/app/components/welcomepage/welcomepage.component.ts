@@ -12,9 +12,10 @@ import { AppRoutingModule } from '../../app-routing.module';
 })
 export class WelcomepageComponent implements OnInit {
 
-  constructor() { }
+  
 
   ngOnInit() {
   }
 
+ 
 }

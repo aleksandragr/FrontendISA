@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedinService } from '../../services/loggedin/loggedin.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loggedin: LoggedinService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+
+  logoutFun(): void{
+    this.router.navigate(['../welcomepage']);
+    this.loggedin.delLocalStore();
+  }
 }

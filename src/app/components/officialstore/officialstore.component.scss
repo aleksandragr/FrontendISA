@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+
+.left{
+    background: violet;
+    margin-left: 150px;
+    width: 330px;
+    height: 160px;
+    margin-top: 20px;
+    
+}
+
+.right{
+    margin-top: 70px;
+    margin-left: 20px;
+}

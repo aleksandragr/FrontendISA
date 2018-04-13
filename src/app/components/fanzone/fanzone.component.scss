@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 400px; /* Should be removed. Only for demonstration */
+}
+
+.left{
+    background: #f1f1f1;
+    width: 20%;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.right{
+    background: #fffb11;
+    width: 70%;
+    height: 600px;
+    border: inset 2px;
+    margin-top: 30px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.space{
+    width: 70px;
+    background: #2E9CE6;
+    
+}
+
+.btn{
+    font-size: 1.1em;
+    border: groove 2px;
+}
+
+.buttons{
+    
+    margin-left: 380px;
+}
+
+div.ex3 {
+    overflow: auto;
+}

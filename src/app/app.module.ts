@@ -21,6 +21,10 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { FanzoneComponent } from './components/fanzone/fanzone.component';
+import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
+import { AnnouncementComponent } from './components/announcement/announcement.component';
+import { ThematicpropsService } from './services/thematicprops/thematicprops.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
-    HomepageComponent
+    HomepageComponent,
+    FanzoneComponent,
+    OfficialstoreComponent,
+    AnnouncementComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     StorageServiceModule,
     Ng2Webstorage
   ],
-  providers: [CinemaService, TheatreService, UserService,LoggedinService],
+  providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

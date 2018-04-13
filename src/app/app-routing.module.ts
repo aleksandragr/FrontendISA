@@ -9,6 +9,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { FanzoneComponent } from './components/fanzone/fanzone.component';
+import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
+import { AnnouncementComponent } from './components/announcement/announcement.component';
 
 
 
@@ -26,7 +29,14 @@ const routes: Routes = [
     children:[
       {path: '', component: HomepageComponent},
       {path: 'homepage', component: HomepageComponent},
-      { path: 'cinemas', component: CinemaComponent}
+      { path: 'cinemas', component: CinemaComponent},
+      { path: 'fanzone', component: FanzoneComponent,
+        children:[
+          {path: 'officialstore', component: OfficialstoreComponent},
+          {path: 'announcement', component: AnnouncementComponent}
+        ]
+    
+      }
     ]
 
 

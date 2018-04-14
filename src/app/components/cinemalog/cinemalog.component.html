@@ -1,0 +1,56 @@
+
+<div>
+    <div>
+      <h1 class="header">Reservation tickets</h1>
+    </div>
+    <hr>
+  
+
+    <div class="row">
+        <div class="column left ex3" style="background-color:#aaa;">
+            <table style="width:100%" class="table">
+                <tr >
+                  <th align="left">Name</th>
+                  <th align="left">Address</th> 
+                  <th align="left">Description</th>
+                  <th align="left">Rating</th>
+                  <th align="left">Repertory</th>
+                </tr>
+                <tr *ngFor="let cinema of cinemas">
+                    <td>{{cinema.name}}</td>
+                    <td>{{cinema.address}}</td> 
+                    <td>{{cinema.description}}</td>
+                    <td>{{cinema.rating}}</td>
+                    <td><button id="{{cinema.id}}"  (click)="getProjections(cinema.id) "  >Repertory</button></td>
+                </tr>
+                
+              </table>
+            
+        </div>
+        <div class="column space">
+        </div>
+        <div class="column right ex3" style="background-color:#bbb;">
+          <div>
+              <label class="label">Projection</label>
+              <select id = "myList1" class="combobox"  ngModel (ngModelChange)="getProjectionDates()" >
+                <option class="option"  *ngFor="let proj of projections" value = "{{proj}}">{{proj.name}}</option>               
+              </select>
+          </div>
+          <div class="space1">         
+          </div>
+          <div>
+              <label class="label">Projection date</label>
+              <select id = "myList2" class="combobox">
+                <option class="option" *ngFor="let pd of projectiondates" value = "{{pd}}">{{pd.date}}</option>               
+              </select>
+              
+          </div>
+
+            
+        </div>
+    </div>
+    
+
+
+    
+</div>

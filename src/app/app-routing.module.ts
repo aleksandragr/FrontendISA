@@ -15,7 +15,7 @@ import { AnnouncementComponent } from './components/announcement/announcement.co
 import { AddThematicPropsComponent } from './components/add-thematic-props/add-thematic-props.component';
 
 import { ReservationComponent} from './components/reservation/reservation.component';
-import { ProjectionComponent} from './components/projection/projection.component';
+
 import { CinemalogComponent} from './components/cinemalog/cinemalog.component';
 
 
@@ -43,8 +43,7 @@ const routes: Routes = [
       { path: 'addthematicprops', component: AddThematicPropsComponent},
     
     
-      { path: 'reservation', component: ReservationComponent},
-      { path: 'projections', component: ProjectionComponent}
+      { path: 'reservation', component: ReservationComponent}
     ]
 
 

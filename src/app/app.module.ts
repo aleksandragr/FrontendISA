@@ -25,6 +25,7 @@ import { FanzoneComponent } from './components/fanzone/fanzone.component';
 import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
 import { AnnouncementComponent } from './components/announcement/announcement.component';
 import { ThematicpropsService } from './services/thematicprops/thematicprops.service';
+import { AddThematicPropsComponent } from './components/add-thematic-props/add-thematic-props.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ThematicpropsService } from './services/thematicprops/thematicprops.ser
     HomepageComponent,
     FanzoneComponent,
     OfficialstoreComponent,
-    AnnouncementComponent
+    AnnouncementComponent,
+    AddThematicPropsComponent
   ],
   imports: [
     BrowserModule,

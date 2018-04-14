@@ -1,3 +1,5 @@
+import { Cinema } from "./cinema";
+
 export class Theatre{
 
     id: number;
@@ -5,6 +7,6 @@ export class Theatre{
     name: string;
     rating: string;
     description: string;
-
+    cinemaTheatre: Cinema;
 
 }

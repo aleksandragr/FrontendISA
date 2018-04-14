@@ -1,0 +1,48 @@
+<div>
+
+
+    <div>
+        <h1 class="header">Thematic props</h1>
+      </div>
+      <hr>
+
+      <form (ngSubmit)="register">
+      <div class="poz">
+     
+            <div class="div">
+              <p class="text">Name:</p>
+              <input class="input" type="text" [(ngModel)]="thematicprops.name"  placeholder="Name" name="name" #namer required>
+            </div>
+       
+            <div class="div">
+              <p class="text">Description:</p>
+              <input class="input" type="text" [(ngModel)]="thematicprops.description"  placeholder="Description" name="description" #descriptionr required>
+            </div>
+       
+            <div class="div">
+              <p class="text">Price</p>
+              <input class="input" type="text" [(ngModel)]="thematicprops.price"   placeholder="price" name="price" #pricer required>
+            </div>
+            
+            <div class="div">
+                <p class="text">Cinema/theatre</p>
+                <input class="input" type="text" [(ngModel)]="thematicprops.cinemaTheatre"   placeholder="Cinema/Theatre" name="Cinema/Theatre" #cinematheatrer required>
+              </div>
+          
+              
+        
+      </div>
+  
+      <input class="submit" type="submit" value="Ok" onclick="location.href='../dashboard/fanzone/officialstore'" (click)="addTProps(); namer.value=''; descriptionr.value=''; pricer.value='';  " >
+      
+    </form>
+
+
+
+
+
+
+
+
+
+</div>

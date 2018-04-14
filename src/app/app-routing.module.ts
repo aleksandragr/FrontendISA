@@ -12,6 +12,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { FanzoneComponent } from './components/fanzone/fanzone.component';
 import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
 import { AnnouncementComponent } from './components/announcement/announcement.component';
+import { AddThematicPropsComponent } from './components/add-thematic-props/add-thematic-props.component';
 
 
 
@@ -35,8 +36,8 @@ const routes: Routes = [
           {path: 'officialstore', component: OfficialstoreComponent},
           {path: 'announcement', component: AnnouncementComponent}
         ]
-    
-      }
+      },
+      { path: 'addthematicprops', component: AddThematicPropsComponent},
     ]
 
 

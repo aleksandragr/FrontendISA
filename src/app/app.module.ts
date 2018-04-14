@@ -25,6 +25,10 @@ import { FanzoneComponent } from './components/fanzone/fanzone.component';
 import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
 import { AnnouncementComponent } from './components/announcement/announcement.component';
 import { ThematicpropsService } from './services/thematicprops/thematicprops.service';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { ProjectionComponent } from './components/projection/projection.component';
+import { CinemalogComponent } from './components/cinemalog/cinemalog.component';
+import { ProjectionsService } from './services/projections/projections.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,10 @@ import { ThematicpropsService } from './services/thematicprops/thematicprops.ser
     HomepageComponent,
     FanzoneComponent,
     OfficialstoreComponent,
-    AnnouncementComponent
+    AnnouncementComponent,
+    ReservationComponent,
+    ProjectionComponent,
+    CinemalogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,7 @@ import { ThematicpropsService } from './services/thematicprops/thematicprops.ser
     StorageServiceModule,
     Ng2Webstorage
   ],
-  providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService],
+  providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

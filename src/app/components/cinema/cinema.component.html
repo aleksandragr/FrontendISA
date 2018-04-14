@@ -1,15 +1,14 @@
 <div>
 
-  <div class="col">
-    <h2 align="center" class="header">Cinemas</h2>
-  </div>
-
-    <ul *ngFor="let cinema of cinemas" type="square" class="ul" > 
-      <li><p><span class="cinema1"> {{cinema.name}}</span> <br> <span class="cinema2">({{cinema.address}}, {{cinema.description}}, {{cinema.rating}})  </span> </p> </li>
-        
-    </ul>
+    <div class="col">
+      <h2 align="center" class="header">Cinemas</h2>
+    </div>
     
   
-</div>
-
-
+      <ul *ngFor="let cinema of cinemas" type="square" class="ul" > 
+        <li><p><span class="cinema1"> {{cinema.name}}</span> <br> <span class="cinema2">({{cinema.address}}, {{cinema.description}}, {{cinema.rating}})  </span> </p> </li>
+          
+      </ul>
+      
+    
+  </div>

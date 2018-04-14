@@ -12,7 +12,9 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { FanzoneComponent } from './components/fanzone/fanzone.component';
 import { OfficialstoreComponent } from './components/officialstore/officialstore.component';
 import { AnnouncementComponent } from './components/announcement/announcement.component';
-
+import { ReservationComponent} from './components/reservation/reservation.component';
+import { ProjectionComponent} from './components/projection/projection.component';
+import { CinemalogComponent} from './components/cinemalog/cinemalog.component';
 
 
 
@@ -27,16 +29,18 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent},
   { path: 'dashboard', component: DashboardComponent,
     children:[
-      {path: '', component: HomepageComponent},
-      {path: 'homepage', component: HomepageComponent},
-      { path: 'cinemas', component: CinemaComponent},
+      { path: '', component: HomepageComponent},
+      { path: 'homepage', component: HomepageComponent},
+      { path: 'cinemaslog', component: CinemalogComponent},
       { path: 'fanzone', component: FanzoneComponent,
         children:[
           {path: 'officialstore', component: OfficialstoreComponent},
           {path: 'announcement', component: AnnouncementComponent}
         ]
     
-      }
+      },
+      { path: 'reservation', component: ReservationComponent},
+      { path: 'projections', component: ProjectionComponent}
     ]
 
 

@@ -1,0 +1,84 @@
+<div>
+
+  <div>
+    <h1 class="header">Edit thematic props</h1>
+  </div>
+  <hr>
+
+
+
+  <div class="row">
+    <div class="column left  ex3">
+
+      <ul *ngFor="let prop of thematicProps">
+
+        <div class="levo"> 
+        <span class="text">{{prop.name}}</span>
+
+        </div>
+        <div class="desno">
+          <button class="editbtn" type="button" (click)="getThematicProps(prop.id)">Edit</button>
+        </div>
+
+
+
+      </ul>
+
+     
+
+
+
+    </div>
+
+    <div class="column space">
+    </div>
+
+    <div class="column right ex3">
+      
+        <form (ngSubmit)="register">
+            <div class="poz">
+           
+                  <div class="div">
+                    <p class="text">Name:</p>
+                    <input class="input" type="text" [(ngModel)]="newThematicProps.name"  placeholder="Name" name="name" #namer required>
+                  </div>
+             
+                  <div class="div">
+                    <p class="text">Description:</p>
+                    <input class="input" type="text" [(ngModel)]="newThematicProps.description"  placeholder="Description" name="description" #descriptionr required>
+                  </div>
+             
+                  <div class="div">
+                    <p class="text">Price</p>
+                    <input class="input" type="text" [(ngModel)]="newThematicProps.price"   placeholder="price" name="price" #pricer required>
+                  </div>
+                  
+                  <div class="div">
+                    <p class="text">Cinema/Theatre</p>
+                    <article>
+                    <select (change)="selectChangeHandler($event)" name="cienmasthemtics" id="cinemat" class="select">
+                      <option value="" selected hidden>Choose Cinema/Theatre</option>
+                      <option  *ngFor="let cinemast of cienmaTheatree"  value={{cinemast.id}}  >{{cinemast.name}}</option>
+      
+      
+                    </select>
+                  </article>
+      
+                  </div>
+                
+                    
+              
+            </div>
+        
+            <input class="submit" type="submit" value="Ok"  onclick="location.href='../dashboard/fanzone/officialstore'" (click)="editProps(); namer.value=''; descriptionr.value=''; pricer.value='';  " >
+            
+          </form>
+
+
+
+
+    </div>
+
+  </div>
+
+</div>

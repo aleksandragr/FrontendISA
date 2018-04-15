@@ -13,11 +13,16 @@
       
       <div class="column right">
 
-        <button type="button"  id={{prop.id}} onclick="myButtonClicked(this)" (click)="reservingProps(prop.id)" >Reservation</button>
+        <button type="button"  id={{prop.id}} onclick="myButtonClicked(this)"  (click)="reservingProps(prop.id)" >Reservation</button>
         
         
       </div>
 
+      <div class="remove">
+
+          <button type="button" id={{prop.id}} class="btnremove" (click)="removeProps(prop.id)">Remove</button>
+
+      </div>
 
     </div>
 

@@ -20,9 +20,9 @@ export class ProjectionsService {
 
   }
 
-  getProjectionDate(): Observable<any>{
+  getProjectionDate(id): Observable<any>{
 
-    return this.http.get<any>('http://localhost:4567/projection/2');
+    return this.http.get<any>('http://localhost:4567/projection/'+id);
 
   }
 

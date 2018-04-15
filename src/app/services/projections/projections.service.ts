@@ -26,4 +26,10 @@ export class ProjectionsService {
 
   }
 
+  getProjectionTerm(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/projectiondate/'+id);
+
+  }
+
 }

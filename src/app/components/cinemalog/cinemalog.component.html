@@ -21,7 +21,7 @@
                     <td>{{cinema.address}}</td> 
                     <td>{{cinema.description}}</td>
                     <td>{{cinema.rating}}</td>
-                    <td><button id="{{cinema.id}}"  (click)="getProjections(cinema.id) "  >Repertory</button></td>
+                    <td><button id="{{cinema.id}}"  (click)="getProjections(cinema.id) " value="Reset" onclick="Reset();">Repertory</button></td>
                 </tr>
                 
               </table>
@@ -31,10 +31,9 @@
         </div>
         <div class="column right ex3" style="background-color:#bbb;">
           <div>
-            <label class="label">Projection</label>
-            
+            <label class="label">Projection</label>            
             <select id = "myList1" class="combobox" (change)="selectChangeHandler($event)" >
-                <option value="" selected hidden>Choose projection</option>
+                <option class="option0" value="0" selected hidden>Choose projection</option>
                 <option class="option"  *ngFor="let proj of projections" value="{{proj.id}}">{{proj.name}}</option>               
             </select>
  
@@ -42,12 +41,42 @@
           <div class="space1">         
           </div>
           <div>
-              <label class="label">Projection date</label>
-              <select id = "myList2" class="combobox">
-                <option class="option" *ngFor="let pd of projectiondates" value = "{{pd}}">{{pd.date}}</option>               
-              </select>
+            <label class="label">Projection date</label>
+            <select id = "myList2" class="combobox" (change)="selectChangeHandler2($event)">
+                <option class="option0" value="0" selected hidden>Choose projection date</option>
+                <option id="2" class="option" *ngFor="let pd of projectiondates" value = "{{pd.id}}">{{pd.date}}</option>               
+            </select>
               
           </div>
+          <div class="space1">         
+          </div>
+          <div>
+            <label class="label">Projection term</label>
+            <select id = "myList3" class="combobox" (change)="selectChangeHandler3($event)">
+                <option class="option0" value="0" selected hidden>Choose projection term</option>
+                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.hall.ordinal}}">{{pt.term}}</option>  
+                    
+            </select>
+                
+          </div>
+          <div class="space1">  
+          </div>       
+          <div>
+              <label class="label">Hall</label>
+              <input type="text" value="{{hall}}" class="in" disabled>
+                  
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+        
 
             
         </div>
@@ -56,4 +85,3 @@
 
 
     
-</div>

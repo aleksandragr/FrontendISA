@@ -6,6 +6,7 @@ import { Repertory} from '../../repertory';
 import { Projection} from '../../projection';
 import { ProjectionsService} from '../../services/projections/projections.service';
 import { Projectiondate } from '../../projectiondate';
+import { Projectionterm } from '../../projectionterm';
 
 @Component({
   selector: 'app-cinemalog',
@@ -20,7 +21,11 @@ export class CinemalogComponent implements OnInit {
   projection: Projection;
   projectiondates: Projectiondate[];
   selectedItem: any;
-  seletedP: any;
+  projectiondate: Projectiondate;
+  projectionterms: Projectionterm[];
+  selectedItem2: any;
+  selectedItem3:any;
+  hall:any;
   
 
   constructor(private cinemaService: CinemaService, private projectionService: ProjectionsService) { }
@@ -36,29 +41,51 @@ export class CinemalogComponent implements OnInit {
   getProjections(id): void{
     this.projectionService.getRepertory(id)
     .subscribe(repertory => {this.repertory=repertory;
-      this.projections = repertory.projections;
+    this.projections = repertory.projections;
       
+    this.projectiondates=[];
+    this.projectionterms=[];
+    this.hall="";
+
     });
     
   }
 
 
   getProjectionDates(): void{
-    console.log("alooo");
-   
-    console.log("saska"+this.selectedItem);
     this.projectionService.getProjectionDate(this.selectedItem)
     .subscribe(projection => {this.projection=projection;
-    console.log(this.projection.projectionDates);
     this.projectiondates=this.projection.projectionDates;
-    console.log(this.projectiondates);
     });
+
+    
   }
 
   selectChangeHandler(event:any){
     this.selectedItem = event.target.value;
+    this.projectionterms=[];
+    this.hall="";
     this.getProjectionDates();
-    console.log("saskaaaaa"+this.selectedItem);
   }
+
+  getProjectionTerms(): void{
+    this.projectionService.getProjectionTerm(this.selectedItem2)
+    .subscribe(projectiondate => {this.projectiondate=projectiondate;
+    this.projectionterms=this.projectiondate.projectionTerms;
+    });
+  }
+
+  selectChangeHandler2(event:any){
+    this.selectedItem2 = event.target.value;
+    this.hall="";
+    this.getProjectionTerms();
+  }
+
+  selectChangeHandler3(event:any){
+    this.selectedItem3=event.target.value;
+    console.log(this.selectedItem3);
+    this.hall=this.selectedItem3;
+  }
+
 
 }

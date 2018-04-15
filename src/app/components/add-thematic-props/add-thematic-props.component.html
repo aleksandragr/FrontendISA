@@ -25,9 +25,17 @@
             </div>
             
             <div class="div">
-                <p class="text">Cinema/theatre</p>
-                <input class="input" type="text" [(ngModel)]="thematicprops.cinemaTheatre"   placeholder="Cinema/Theatre" name="Cinema/Theatre" #cinematheatrer required>
-              </div>
+              <p class="text">Cinema/Theatre</p>
+              <article>
+              <select (change)="selectChangeHandler($event)" name="cienmasthemtics" id="cinemat" class="select">
+                <option value="" selected hidden>Choose Cinema/Theatre</option>
+                <option  *ngFor="let cinemast of cinemasthematics"  value={{cinemast.id}}  >{{cinemast.name}}</option>
+
+
+              </select>
+            </article>
+
+            </div>
           
               
         

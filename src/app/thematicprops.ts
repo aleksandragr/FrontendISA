@@ -1,3 +1,5 @@
+import { Cinema } from "./cinema";
+
 export class thematicprops{
 
     id: number;
@@ -5,6 +7,6 @@ export class thematicprops{
     price: string;
     description: string;
     reserved: string;
-
+    cinemaTheatre: Cinema;
 
 }

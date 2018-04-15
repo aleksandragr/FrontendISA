@@ -30,6 +30,7 @@ import { ReservationComponent } from './components/reservation/reservation.compo
 
 import { CinemalogComponent } from './components/cinemalog/cinemalog.component';
 import { ProjectionsService } from './services/projections/projections.service';
+import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ProjectionsService } from './services/projections/projections.service';
     AnnouncementComponent,
     AddThematicPropsComponent,
     ReservationComponent,
-    CinemalogComponent
+    CinemalogComponent,
+    EditThematicPropsComponent
   ],
   imports: [
     BrowserModule,

@@ -51,6 +51,17 @@ export class OfficialstoreComponent implements OnInit {
   }
 
 
+  removeProps(prop): void{
+
+
+    this.thematicpropsService.removeThematicProps(prop)
+    .subscribe(data => this.propid = data);
+
+    location.reload();
+
+  }
+
+
 
 
 

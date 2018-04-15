@@ -36,4 +36,18 @@ export class ThematicpropsService {
 
   }
 
+  editThematicProps(props: thematicprops): Observable<any>{
+   
+    return this.http.post<any>('http://localhost:4567/thematicProps/editProps', props, httpOptions);
+
+  }
+
+
+  removeThematicProps(props): Observable<any>{
+
+    return this.http.post<any>('http://localhost:4567/thematicProps/removeProps/' + props, props, httpOptions);
+
+  }
+
+
 }

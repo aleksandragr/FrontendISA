@@ -19,6 +19,8 @@ export class CinemalogComponent implements OnInit {
   projections: Projection[];
   projection: Projection;
   projectiondates: Projectiondate[];
+  selectedItem: any;
+  seletedP: any;
   
 
   constructor(private cinemaService: CinemaService, private projectionService: ProjectionsService) { }
@@ -42,13 +44,21 @@ export class CinemalogComponent implements OnInit {
 
 
   getProjectionDates(): void{
-    console.log("aloooooo");
-    this.projectionService.getProjectionDate()
+    console.log("alooo");
+   
+    console.log("saska"+this.selectedItem);
+    this.projectionService.getProjectionDate(this.selectedItem)
     .subscribe(projection => {this.projection=projection;
     console.log(this.projection.projectionDates);
     this.projectiondates=this.projection.projectionDates;
     console.log(this.projectiondates);
     });
+  }
+
+  selectChangeHandler(event:any){
+    this.selectedItem = event.target.value;
+    this.getProjectionDates();
+    console.log("saskaaaaa"+this.selectedItem);
   }
 
 }

@@ -31,10 +31,13 @@
         </div>
         <div class="column right ex3" style="background-color:#bbb;">
           <div>
-              <label class="label">Projection</label>
-              <select id = "myList1" class="combobox"  ngModel (ngModelChange)="getProjectionDates()" >
-                <option class="option"  *ngFor="let proj of projections" value = "{{proj}}">{{proj.name}}</option>               
-              </select>
+            <label class="label">Projection</label>
+            
+            <select id = "myList1" class="combobox" (change)="selectChangeHandler($event)" >
+                <option value="" selected hidden>Choose projection</option>
+                <option class="option"  *ngFor="let proj of projections" value="{{proj.id}}">{{proj.name}}</option>               
+            </select>
+ 
           </div>
           <div class="space1">         
           </div>

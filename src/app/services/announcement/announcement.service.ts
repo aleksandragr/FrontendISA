@@ -20,13 +20,13 @@ export class AnnouncementService {
   }
 
   addAnnouncement(ann): Observable<any>{
-
+    console.log("aaaaaaaaaaaa");
     return this.Http.put<any>('http://localhost:4567/announcement/addAnnouncement', ann, httpOptions);
   }
 
 
   getBidsOfAnnouncement(id): Observable<any>{
-
+    
     return this.Http.get<any>('http://localhost:4567/announcement/getBidOfAnnouncement/' + id);
 
   }

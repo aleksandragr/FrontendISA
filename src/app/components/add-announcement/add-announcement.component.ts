@@ -18,7 +18,8 @@ export class AddAnnouncementComponent implements OnInit {
   }
 
   addannouncement(){
-
+    console.log(this.ann.name);
+    console.log(this.ann.date);
     this.announcementService.addAnnouncement(this.ann)
     .subscribe(data => this.announcement = data);
 
@@ -26,3 +27,4 @@ export class AddAnnouncementComponent implements OnInit {
 
 
 }
+//onclick="location.href='../dashboard/fanzone/announcement'"

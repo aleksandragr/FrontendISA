@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedinService } from '../../services/loggedin/loggedin.service';
+import { User } from '../../user';
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  u: User;
+  
+
+  constructor(private loggedIn: LoggedinService) { }
 
   ngOnInit() {
+    var ua = this.loggedIn.getLocalStore();
+    this.u=ua;
   }
 
 }

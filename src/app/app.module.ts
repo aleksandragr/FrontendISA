@@ -31,6 +31,8 @@ import { ReservationComponent } from './components/reservation/reservation.compo
 import { CinemalogComponent } from './components/cinemalog/cinemalog.component';
 import { ProjectionsService } from './services/projections/projections.service';
 import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
+import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
+import { AnnouncementService } from './services/announcement/announcement.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { EditThematicPropsComponent } from './components/edit-thematic-props/edi
     AddThematicPropsComponent,
     ReservationComponent,
     CinemalogComponent,
-    EditThematicPropsComponent
+    EditThematicPropsComponent,
+    AddAnnouncementComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { EditThematicPropsComponent } from './components/edit-thematic-props/edi
     StorageServiceModule,
     Ng2Webstorage
   ],
-  providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService],
+  providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
+    AnnouncementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,47 @@
+<div>
+
+
+    <div>
+      <h1 class="header">Add announcement</h1>
+    </div>
+    <hr>
+
+    <form (ngSubmit)="addannouncement">
+        <div class="poz">
+       
+              <div class="div">
+                <p class="text">Name:</p>
+                <input class="input" type="text" [(ngModel)]="ann.name"  placeholder="Name" name="name" #namer required>
+              </div>
+              
+              <div class="div">
+                <p class="text">Description:</p>
+                <input class="input" type="text" [(ngModel)]="ann.description"  placeholder="Description" name="description" #descriptionr required>
+              </div>
+         
+              <div class="div">
+                <p class="text">Date</p>
+                <input class="input" type="text" [(ngModel)]="ann.date"   placeholder="Date" name="date" #dater required>
+              </div>
+              
+              <div class="div">
+                <p class="text">Picture</p>
+               
+  
+              </div>
+            
+                
+          
+        </div>
+    
+        <input class="submit" type="submit" value="Ok" onclick="location.href='../dashboard/fanzone/announcement'" (click)="addannouncement(); namer.value=''; descriptionr.value=''; dater.value='';  " >
+        
+      </form>
+
+
+
+
+
+
+
+</div>

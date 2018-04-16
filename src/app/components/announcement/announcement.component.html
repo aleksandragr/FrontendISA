@@ -1,3 +1,62 @@
-<p>
-  announcement works!
-</p>
+<div>
+
+
+<div class="addann">
+  <button class="addButton"><a [routerLink]="['../../addAnnouncementt']" style='text-decoration:none;'>Add announcement</a></button>
+</div>
+
+
+ 
+<div class="levi ex3">
+    <ul *ngFor="let ann of announcements">
+
+      <div class="announ">
+        Name:{{ann.name}}<br>
+        Description:{{ann.description}}<br>
+        Date:{{ann.date}}
+      </div>
+      
+
+
+      <div class="divBtn">
+         <button class="btnPreview" (click)="getBidsOfAnn(ann.id)">View</button>
+       </div>  
+     <hr>
+    </ul>
+
+  </div>
+
+  <div class="space"></div>
+  <div class="desni">
+    
+
+
+      <table style="width:60%" class="table">
+          <tr >
+            <th align="left">Username</th>
+            <th align="left">Offered</th> 
+          </tr>
+          <tr *ngFor="let b of bids">
+              <td>{{b.user.name}}</td>
+              <td>{{b.offered}}</td>
+          </tr>
+          
+        </table>
+
+      
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+</div>

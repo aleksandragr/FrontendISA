@@ -27,4 +27,3 @@ export class AddAnnouncementComponent implements OnInit {
 
 
 }
-//onclick="location.href='../dashboard/fanzone/announcement'"

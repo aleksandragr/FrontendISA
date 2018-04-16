@@ -36,7 +36,7 @@
 }
 
 .announ{
-    width: 290px;
+    width: 280px;
     height: 100px;
     margin-top: 15px;
     margin-left: 0cm;
@@ -46,13 +46,21 @@
 
 .btnPreview{
     
-    margin-top: 0px;
+    margin-top: 2px;
 
+}
+
+.btnAdd{
+    
+    margin-top: 2px;
+    width: 73px;
 }
 
 .divBtn{
     display: inline-block;
     margin-left: 25px;
+  
+   
 }
 
 div.ex3 {
@@ -63,4 +71,35 @@ div.ex3 {
     margin-left: 20px;
     margin-top: 20px;
     border: 1px solid black;
+}
+
+.tableadd,th,td{
+    margin-left: 110px;
+    margin-top: 0px;
+    border: 1px solid black;
+}
+
+.addB{
+    
+    width: 600px;
+    height: 150px;
+    background: blueviolet;
+
+}
+
+.btnaddbid{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 40px;
+    
+}
+
+.disp{
+    display: inline-block;
+
+}
+
+.ajdeBrate{
+    margin-top: 30px;
+    
 }

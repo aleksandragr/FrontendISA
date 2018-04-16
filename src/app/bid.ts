@@ -9,3 +9,7 @@ export class bid{
     announcement: announcement;
 
 }
+
+
+
+

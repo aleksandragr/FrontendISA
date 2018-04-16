@@ -17,9 +17,9 @@
       </div>
       
 
-
       <div class="divBtn">
-         <button class="btnPreview" (click)="getBidsOfAnn(ann.id)">View</button>
+        <button class="btnAdd" (click)="getAnnOfId(ann.id)" onclick="funkcijaDisabled()">Offer</button><br>
+         <button class="btnPreview" (click)="getBidsOfAnn(ann.id)">View bids</button>
        </div>  
      <hr>
     </ul>
@@ -29,8 +29,29 @@
   <div class="space"></div>
   <div class="desni">
     
+      <div class="addB">
+          <h3 align="center">Add bid on announcement</h3>
+          <div class="disp">
+          <table style="width:60%" class="tableadd">
+              <tr >
+                <th align="left">Username</th>
+                <th align="left">Announcement</th> 
+                <th align="left">Offered</th> 
+              </tr>
+              <tr>
+                  <td>{{user.name}}</td>
+                  <td >{{annOfId.name}}</td>
+                  <td><input placeholder="offered" type="text" id="inputBid" [(ngModel)]="offered" disabled></td>
+              </tr>
+              
+            </table>
+          </div>
+            <div class="btnaddbid">
+                <button class="ajdeBrate" onclick="funkcijaDisabled1()" (click)="addBidOnAnnouncement()">Add bid</button>
+              </div>
 
-
+      </div>
+    
       <table style="width:60%" class="table">
           <tr >
             <th align="left">Username</th>
@@ -43,20 +64,6 @@
           
         </table>
 
-      
-
-
-
-
-
-
-
-
-
   </div>
-
-
-
-
 
 </div>

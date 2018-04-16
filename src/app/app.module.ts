@@ -33,6 +33,7 @@ import { ProjectionsService } from './services/projections/projections.service';
 import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
 import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
 import { AnnouncementService } from './services/announcement/announcement.service';
+import { BidService } from './services/bid/bid.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { AnnouncementService } from './services/announcement/announcement.servic
     Ng2Webstorage
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
-    AnnouncementService],
+    AnnouncementService,BidService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

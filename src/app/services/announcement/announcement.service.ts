@@ -30,4 +30,10 @@ export class AnnouncementService {
     return this.Http.get<any>('http://localhost:4567/announcement/getBidOfAnnouncement/' + id);
 
   }
+
+  getAnnouncementOfId(id): Observable<any>{
+
+    return this.Http.get<any>('http://localhost:4567/announcement/getAnnouncement/' + id);
+
+  }
 }

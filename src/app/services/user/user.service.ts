@@ -27,6 +27,18 @@ export class UserService {
 
   }
 
+  editUser(user: User): Observable<any>{
+   
+    return this.http.post<any>('http://localhost:4567/user/editUser', user, httpOptions);
+
+  }
+
+  editPassword(user: User): Observable<any>{
+   
+    return this.http.post<any>('http://localhost:4567/user/editPassword', user, httpOptions);
+
+  }
+
 
 
 }

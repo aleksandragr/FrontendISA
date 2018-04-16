@@ -27,5 +27,9 @@ export class BidService {
 
   }
 
+  getBidOfUserAndAnnouncement(id,an): Observable<any>{
 
+    return this.Http.get<any>('http://localhost:4567/bid/getUserOfAnnoucement/' + id + '/' + an);
+
+  }
 }

@@ -18,7 +18,8 @@ export class AnnouncementComponent implements OnInit {
   user: User;
   annOfId: any={};
   bid: any={};
-  offered: any={};
+  offered: any;
+  bidOfUsera: bid;
 
   constructor(private announcementService: AnnouncementService,
         private loggedin: LoggedinService,
@@ -38,7 +39,7 @@ export class AnnouncementComponent implements OnInit {
 
 
   getBidsOfAnn(id): void{
-
+    this.bids = [];
     this.announcementService.getBidsOfAnnouncement(id)
     .subscribe(data => this.bids = data);
 
@@ -58,13 +59,25 @@ export class AnnouncementComponent implements OnInit {
     this.bid.user = this.user;
     this.bid.announcement = this.annOfId;
     this.bid.offered = this.offered;
-    console.log(this.bid.offered);
-    console.log(this.bid.user.name);
-    console.log(this.bid.announcement.name);
+
     this.bidService.addBid(this.bid)
     .subscribe(data => this.bid = data);
     location.reload();
 
   }
+
+
+  getBidOfuserAndannouncement(an){
+    this.offered = "";
+    this.bidService.getBidOfUserAndAnnouncement(this.user.id,an )
+    .subscribe(data =>{ this.bidOfUsera  = data;
+      
+      this.offered = this.bidOfUsera.offered;
+    
+    
+    });
+
+  }
+
 
 }

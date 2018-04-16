@@ -7,6 +7,11 @@ import { Projection} from '../../projection';
 import { ProjectionsService} from '../../services/projections/projections.service';
 import { Projectiondate } from '../../projectiondate';
 import { Projectionterm } from '../../projectionterm';
+import { Hall } from '../../hall';
+import { Seat } from '../../seat';
+import { LoggedinService } from '../../services/loggedin/loggedin.service';
+import { NgIf } from '@angular/common';
+
 
 @Component({
   selector: 'app-cinemalog',
@@ -25,10 +30,14 @@ export class CinemalogComponent implements OnInit {
   projectionterms: Projectionterm[];
   selectedItem2: any;
   selectedItem3:any;
-  hall:any;
+  hall:any = {};
+  seats:Seat[];
+  reservedSeat: Seat;
+  
+  
   
 
-  constructor(private cinemaService: CinemaService, private projectionService: ProjectionsService) { }
+  constructor(private cinemaService: CinemaService, private projectionService: ProjectionsService,private loggedIn: LoggedinService) { }
 
   ngOnInit() {
 
@@ -46,6 +55,7 @@ export class CinemalogComponent implements OnInit {
     this.projectiondates=[];
     this.projectionterms=[];
     this.hall="";
+    this.seats=[];
 
     });
     
@@ -65,6 +75,7 @@ export class CinemalogComponent implements OnInit {
     this.selectedItem = event.target.value;
     this.projectionterms=[];
     this.hall="";
+    this.seats=[];
     this.getProjectionDates();
   }
 
@@ -78,13 +89,31 @@ export class CinemalogComponent implements OnInit {
   selectChangeHandler2(event:any){
     this.selectedItem2 = event.target.value;
     this.hall="";
+    this.seats=[];
     this.getProjectionTerms();
+  }
+
+  getHall(): void{
+    this.projectionService.getHall(this.selectedItem3)
+    .subscribe(hall1 => {this.hall=hall1;
+    console.log(this.hall.id);
+    this.seats=this.hall.seats;
+    
+    });
   }
 
   selectChangeHandler3(event:any){
     this.selectedItem3=event.target.value;
-    console.log(this.selectedItem3);
-    this.hall=this.selectedItem3;
+    this.getHall(); 
+  }
+
+  reservingSeat(seat): void{
+    var ua = this.loggedIn.getLocalStore();
+    
+    this.projectionService.reserveSeat(ua.id,seat)
+    .subscribe(data => this.reservedSeat = data);
+
+
   }
 
 

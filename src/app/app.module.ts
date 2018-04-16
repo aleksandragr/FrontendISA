@@ -34,6 +34,7 @@ import { EditThematicPropsComponent } from './components/edit-thematic-props/edi
 import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
 import { AnnouncementService } from './services/announcement/announcement.service';
 import { BidService } from './services/bid/bid.service';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { BidService } from './services/bid/bid.service';
     ReservationComponent,
     CinemalogComponent,
     EditThematicPropsComponent,
-    AddAnnouncementComponent
+    AddAnnouncementComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

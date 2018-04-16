@@ -19,6 +19,7 @@ import { ReservationComponent} from './components/reservation/reservation.compon
 import { CinemalogComponent} from './components/cinemalog/cinemalog.component';
 import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
 import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 
 
@@ -46,7 +47,7 @@ const routes: Routes = [
       { path: 'addthematicprops', component: AddThematicPropsComponent},
       { path: 'editthematicprops', component: EditThematicPropsComponent},
       {path: 'addAnnouncementt', component: AddAnnouncementComponent},
-      
+      {path: 'edituser', component: EditUserComponent},
       { path: 'reservation', component: ReservationComponent}
     ]
 

@@ -43,10 +43,14 @@
             <input class="input" type="text" [(ngModel)]="userr.phoneNumber"  placeholder="Phone number" name="phonenumber" #phoneNumr required>
           </div>
             
+          <input class="submit" type="submit" value="Submit" (click)="register(); emailr.value=''; newPassr.value=''; repeatPassr.value=''; namer.value=''; surnamer.value=''; cityr.value=''; phoneNumr.value='' " >
+          <button class="button" onclick="location.href='/login'">Login</button>
       
     </div>
 
-    <input class="submit" type="submit" value="Register" onclick="location.href='/login'" (click)="register(); emailr.value=''; newPassr.value=''; repeatPassr.value=''; namer.value=''; surnamer.value=''; cityr.value=''; phoneNumr.value='' " >
+    
+    
+
     
   </form>
 

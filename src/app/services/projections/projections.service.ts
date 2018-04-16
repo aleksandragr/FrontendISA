@@ -32,4 +32,16 @@ export class ProjectionsService {
 
   }
 
+  getHall(id):Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/hall/'+id);
+
+  }
+
+  reserveSeat(iduser, seat): Observable<any>{
+
+    return this.http.post<any>('http://localhost:4567/seat/reserving/' + iduser +'/' + seat, seat, httpOptions);
+
+}
+
 }

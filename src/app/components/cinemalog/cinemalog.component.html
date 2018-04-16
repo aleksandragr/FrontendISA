@@ -16,8 +16,8 @@
                   <th align="left">Rating</th>
                   <th align="left">Repertory</th>
                 </tr>
-                <tr *ngFor="let cinema of cinemas">
-                    <td>{{cinema.name}}</td>
+                <tr *ngFor="let cinema of cinemas" >
+                    <td>{{cinema.name}} </td>
                     <td>{{cinema.address}}</td> 
                     <td>{{cinema.description}}</td>
                     <td>{{cinema.rating}}</td>
@@ -54,26 +54,28 @@
             <label class="label">Projection term</label>
             <select id = "myList3" class="combobox" (change)="selectChangeHandler3($event)">
                 <option class="option0" value="0" selected hidden>Choose projection term</option>
-                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.hall.ordinal}}">{{pt.term}}</option>  
-                    
+                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.hall.id}}">{{pt.term}}</option>  
+                 
             </select>
-                
+               
           </div>
           <div class="space1">  
           </div>       
           <div>
               <label class="label">Hall</label>
-              <input type="text" value="{{hall}}" class="in" disabled>
+              <input type="text" value="{{hall.id}}" class="in" disabled>
                   
           </div>
-
-
-
-
-
-
-
-
+          <div class="space1">  
+          </div>       
+          <div>
+              <label class="label">Seats</label>
+              <div class="buttons">
+              <button   *ngFor="let s of seats"  [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
+              </div>
+               
+          </div>
+          
 
         </div>
         

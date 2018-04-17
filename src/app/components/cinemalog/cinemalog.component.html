@@ -29,7 +29,7 @@
         </div>
         <div class="column space">
         </div>
-        <div class="column right ex3" style="background-color: lightblue;">
+        <div class="column right " style="background-color: lightblue;">
           <div>
             <label class="label">Projection</label>            
             <select id = "myList1" class="combobox" (change)="selectChangeHandler($event)" >
@@ -54,7 +54,7 @@
             <label class="label">Projection term</label>
             <select id = "myList3" class="combobox" (change)="selectChangeHandler3($event)">
                 <option class="option0" value="0" selected hidden>Choose projection term</option>
-                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.hall.id}}">{{pt.term}}</option>  
+                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.id}}">{{pt.term}}</option>  
                  
             </select>
                
@@ -63,15 +63,17 @@
           </div>       
           <div>
               <label class="label">Hall</label>
-              <input type="text" value="{{hall.ordinal}}" class="in" disabled>
-                  
+              <input type="text" value={{halll}} class="in" disabled>
+              <label class="sp"></label>
+              <label class="labelp">Price</label>
+              <input type="text" value={{price}} class="in" disabled>    
           </div>
           <div class="space1">  
           </div>       
           <div>
               <label class="label">Seats</label>
               <div class="buttons">
-              <button   *ngFor="let s of seats"  [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
+              <button   *ngFor="let s of seatss"  [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
               </div>
                
           </div>

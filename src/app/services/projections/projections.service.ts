@@ -44,4 +44,16 @@ export class ProjectionsService {
 
 }
 
+  getProjectionterm(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/projectionterm/'+id);
+
+  }
+
+  getSeats(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/seat/getSeats/'+id);
+
+  }
+
 }

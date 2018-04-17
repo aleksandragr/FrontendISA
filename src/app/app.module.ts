@@ -35,7 +35,12 @@ import { AddAnnouncementComponent } from './components/add-announcement/add-anno
 import { AnnouncementService } from './services/announcement/announcement.service';
 import { BidService } from './services/bid/bid.service';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+<<<<<<< HEAD
 import { MineAnnouncementComponent } from './components/mine-announcement/mine-announcement.component';
+=======
+import { FriendsComponent } from './components/friends/friends.component';
+import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
+>>>>>>> d0dfcb065c47d2ac93bfad54de961f3eb836ea36
 
 @NgModule({
   declarations: [
@@ -56,7 +61,12 @@ import { MineAnnouncementComponent } from './components/mine-announcement/mine-a
     EditThematicPropsComponent,
     AddAnnouncementComponent,
     EditUserComponent,
+<<<<<<< HEAD
     MineAnnouncementComponent
+=======
+    FriendsComponent,
+    TheatrelogComponent
+>>>>>>> d0dfcb065c47d2ac93bfad54de961f3eb836ea36
   ],
   imports: [
     BrowserModule,

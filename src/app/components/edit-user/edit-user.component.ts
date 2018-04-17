@@ -12,6 +12,8 @@ export class EditUserComponent implements OnInit {
 
   u: User;
   pass: any;
+  newpp: any;
+  currp: any;
 
   constructor(private loggedIn: LoggedinService,private userservice: UserService) { }
 
@@ -32,6 +34,8 @@ export class EditUserComponent implements OnInit {
 
   editPassword(){
     this.u.password=this.pass;
+    this.u.newPassword=this.newpp;
+    this.u.repeatPassword=this.currp;
     this.userservice.editPassword(this.u)
     .subscribe(data =>{ this.u = data;     
     });

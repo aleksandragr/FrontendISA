@@ -81,23 +81,23 @@
                           <div>
                             
                             <label  class="label">Current password</label>
-                            <input type="text" [(ngModel)]="pass" name="password" class="in" >
+                            <input type="text" [(ngModel)]="pass" name="password" class="in" #passw required>
                           </div>
                           <div class="space2"></div>
                           <div>
                             
                             <label  class="label">New password</label>
-                            <input type="text" [(ngModel)]="u.newPassword" name="newPassword" class="in" >
+                            <input type="text" [(ngModel)]="newpp" name="newPassword" class="in" #newp required>
                           </div>
                           <div class="space2"></div>
                           <div>
                               <label class="label">Repeat password</label>
-                              <input type="text" [(ngModel)]="u.repeatPassword" name="repeatPassword" class="in" >
+                              <input type="text" [(ngModel)]="currp" name="repeatPassword" class="in" #repp required>
                           </div>
                           <div class="space2"></div>
                           
                           
-                          <input class="submit" type="submit"  value="Edit "   (click)="editPassword()" >
+                          <input class="submit" type="submit"  value="Edit "   (click)="editPassword(); passw.value=''; newp.value='';repp.value='' " >
                         </div>
   
                         

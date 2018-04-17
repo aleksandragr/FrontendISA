@@ -30,8 +30,12 @@ export class CinemalogComponent implements OnInit {
   projectionterms: Projectionterm[];
   selectedItem2: any;
   selectedItem3:any;
+  projectionterm: Projectionterm;
   hall:any = {};
+  price: any;
+  halll: any;
   seats:Seat[];
+  seatss:Seat[];
   reservedSeat: Seat;
   
   
@@ -56,6 +60,9 @@ export class CinemalogComponent implements OnInit {
     this.projectionterms=[];
     this.hall="";
     this.seats=[];
+    this.halll="";
+    this.price="";
+    this.seatss=[];
 
     });
     
@@ -76,6 +83,9 @@ export class CinemalogComponent implements OnInit {
     this.projectionterms=[];
     this.hall="";
     this.seats=[];
+    this.halll="";
+    this.price="";
+    this.seatss=[];
     this.getProjectionDates();
   }
 
@@ -90,11 +100,14 @@ export class CinemalogComponent implements OnInit {
     this.selectedItem2 = event.target.value;
     this.hall="";
     this.seats=[];
+    this.halll="";
+    this.price="";
+    this.seatss=[];
     this.getProjectionTerms();
   }
 
   getHall(): void{
-    this.projectionService.getHall(this.selectedItem3)
+    this.projectionService.getHall(this.projectionterm.hall.id)
     .subscribe(hall1 => {this.hall=hall1;
     console.log(this.hall.id);
     this.seats=this.hall.seats;
@@ -102,9 +115,29 @@ export class CinemalogComponent implements OnInit {
     });
   }
 
+  getProjectionterm(): void{
+    this.projectionService.getProjectionterm(this.selectedItem3)
+    .subscribe(ptt => {this.projectionterm=ptt;
+    this.price=this.projectionterm.price;
+    this.halll=this.projectionterm.hall.ordinal;
+    
+    });
+  }
+
   selectChangeHandler3(event:any){
     this.selectedItem3=event.target.value;
-    this.getHall(); 
+    console.log(this.selectedItem3);
+    this.halll="";
+    this.price="";
+    this.seatss=[];
+    this.getProjectionterm();
+    this.getSeats();
+  }
+
+  getSeats(): void{
+    this.projectionService.getSeats(this.selectedItem3)
+    .subscribe(ss => {this.seatss=ss})
+    
   }
 
   reservingSeat(seat): void{

@@ -20,6 +20,8 @@ import { CinemalogComponent} from './components/cinemalog/cinemalog.component';
 import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
 import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
 
 
 
@@ -38,6 +40,7 @@ const routes: Routes = [
       { path: '', component: HomepageComponent},
       { path: 'homepage', component: HomepageComponent},
       { path: 'cinemaslog', component: CinemalogComponent},
+      { path: 'theatrelog', component: TheatrelogComponent},
       { path: 'fanzone', component: FanzoneComponent,
         children:[
           {path: 'officialstore', component: OfficialstoreComponent},
@@ -48,7 +51,8 @@ const routes: Routes = [
       { path: 'editthematicprops', component: EditThematicPropsComponent},
       {path: 'addAnnouncementt', component: AddAnnouncementComponent},
       {path: 'edituser', component: EditUserComponent},
-      { path: 'reservation', component: ReservationComponent}
+      { path: 'reservation', component: ReservationComponent},
+      { path: 'friends', component: FriendsComponent}
     ]
 
 

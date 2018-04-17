@@ -35,6 +35,8 @@ import { AddAnnouncementComponent } from './components/add-announcement/add-anno
 import { AnnouncementService } from './services/announcement/announcement.service';
 import { BidService } from './services/bid/bid.service';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     CinemalogComponent,
     EditThematicPropsComponent,
     AddAnnouncementComponent,
-    EditUserComponent
+    EditUserComponent,
+    FriendsComponent,
+    TheatrelogComponent
   ],
   imports: [
     BrowserModule,

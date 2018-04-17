@@ -4,6 +4,7 @@ import { LoggedinService } from '../../services/loggedin/loggedin.service';
 import { User } from '../../user';
 import { announcement } from '../../announcement';
 import { bid } from '../../bid';
+import { NotificationService } from '../../services/notification/notification.service';
 
 @Component({
   selector: 'app-mine-announcement',
@@ -14,10 +15,14 @@ export class MineAnnouncementComponent implements OnInit {
 
   user: User;
   bids: bid[];
+  notification: Notification;
+  notisend: any={};
+  nazivOglasa: string;
 
   announcements: announcement[];
   constructor(private announcementService: AnnouncementService,
-      private loggedinService: LoggedinService
+      private loggedinService: LoggedinService,
+      private notificationService: NotificationService
   ) { }
 
   ngOnInit() {
@@ -31,11 +36,22 @@ export class MineAnnouncementComponent implements OnInit {
   
   }
 
-  getBidsOfAnn(id): void{
+  getBidsOfAnn(id,name): void{
     this.bids = [];
+    this.nazivOglasa = name;
     this.announcementService.getBidsOfAnnouncement(id)
     .subscribe(data => this.bids = data);
 
   }
 
+
+  acceptBidNoti(user2): void{
+    this.notisend.userone = this.user;
+    this.notisend.description = "Your offer on announcement '" + this.nazivOglasa + "' is accepted";
+    this.notisend.usertwo = user2;
+    
+    this.notificationService.acceptBidNotification(this.notisend)
+    .subscribe(data => this.notification = data);
+    
+  }
 }

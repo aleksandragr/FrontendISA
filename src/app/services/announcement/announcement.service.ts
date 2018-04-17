@@ -13,9 +13,9 @@ export class AnnouncementService {
 
   constructor(private Http: HttpClient) { }
 
-  getAllAnnouncement(): Observable<any>{
+  getAllAnnouncement(id): Observable<any>{
 
-    return this.Http.get<any>('http://localhost:4567/announcement/getAnnouncements');
+    return this.Http.post<any>('http://localhost:4567/announcement/getAllAnnouncements/' + id, id, httpOptions);
 
   }
 

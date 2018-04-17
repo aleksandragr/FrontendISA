@@ -38,6 +38,8 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { MineAnnouncementComponent } from './components/mine-announcement/mine-announcement.component';
 import { FriendsComponent } from './components/friends/friends.component';
 import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
+import { NotificationService } from './services/notification/notification.service';
+import { MineNotificationComponent } from './components/mine-notification/mine-notification.component';
 
 @NgModule({
   declarations: [
@@ -58,9 +60,10 @@ import { TheatrelogComponent } from './components/theatrelog/theatrelog.componen
     EditThematicPropsComponent,
     AddAnnouncementComponent,
     EditUserComponent,
-    MineAnnouncementComponent
+    MineAnnouncementComponent,
     FriendsComponent,
-    TheatrelogComponent
+    TheatrelogComponent,
+    MineNotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,7 @@ import { TheatrelogComponent } from './components/theatrelog/theatrelog.componen
     Ng2Webstorage
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
-    AnnouncementService,BidService],
+    AnnouncementService,BidService,NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

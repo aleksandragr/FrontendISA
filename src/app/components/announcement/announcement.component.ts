@@ -31,7 +31,7 @@ export class AnnouncementComponent implements OnInit {
     var u = this.loggedin.getLocalStore();
     this.user = u;
 
-    this.announcementService.getAllAnnouncement()
+    this.announcementService.getAllAnnouncement(this.user.id)
     .subscribe(data => this.announcements = data );
 
    

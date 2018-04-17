@@ -18,7 +18,7 @@
           <tr *ngFor="let ann of announcements">
               <td>{{ann.name}}</td>
               <td>{{ann.description}}</td>
-              <td><button class="btnreview" (click)="getBidsOfAnn(ann.id)">review</button></td>
+              <td><button class="btnreview"  (click)="getBidsOfAnn(ann.id,ann.name)">review</button></td>
           </tr>
           
         </table>
@@ -45,7 +45,7 @@
           <tr *ngFor="let b of bids">
               <td>{{b.user.name}}</td>
               <td>{{b.offered}}</td>
-              <td><button>Accept</button></td>
+              <td><button (click)="acceptBidNoti(b.user)">Accept</button></td>
           </tr>
           
         </table>

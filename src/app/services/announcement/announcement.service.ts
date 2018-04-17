@@ -36,4 +36,10 @@ export class AnnouncementService {
     return this.Http.get<any>('http://localhost:4567/announcement/getAnnouncement/' + id);
 
   }
+
+  getAnnOfUser(id): Observable<any>{
+
+    return this.Http.get<any>('http://localhost:4567/announcement/getAnnauncementsOfUser/' + id);
+
+  }
 }

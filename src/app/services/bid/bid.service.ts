@@ -22,7 +22,7 @@ export class BidService {
   }
 
   addBid(bid: bid): Observable<any>{
-
+    console.log(bid);
     return this.Http.put<any>('http://localhost:4567/bid/addBidOnAnnouncement', bid, httpOptions);
 
   }

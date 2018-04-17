@@ -1,9 +1,12 @@
 .addann{
     margin-left: 870px;
     margin-top: 20px;
-   
+   display: inline-block;
 }
 
+.addAnnouncement{
+    display: inline-block;
+}
 .addButton{
     background: rgb(118, 252, 8);
     width: 140px;
@@ -15,7 +18,7 @@
     display: inline-block;
     background: rgb(214, 255, 30);
     width: 430px;
-    height: 700px;
+    height: 560px;
     margin-top: 0px;
     float: left;
 
@@ -30,7 +33,7 @@
     display: inline-block;
     margin-left: 70px;
     margin-top: 0px;
-    height: 700px;
+    height: 500px;
     vertical-align:top;
     
 }
@@ -68,8 +71,8 @@ div.ex3 {
 }
 
 .table,th,td{
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
     border: 1px solid black;
 }
 
@@ -83,7 +86,7 @@ div.ex3 {
     
     width: 700px;
     height: 150px;
-    background: blueviolet;
+    background: rgb(214, 255, 30);
     margin-left: 20px;
 }
 

@@ -1,0 +1,57 @@
+<div>
+
+
+  <div class="header" align="center">
+    <h1 class="naslov">Mine announcement</h1>
+  </div>
+  <hr>
+
+
+  <div class="levi">
+
+      <table style="width:80%" class="table">
+          <tr >
+            <th align="left">Name</th>
+            <th align="left">Description</th> 
+            <th align="left">Offereds</th>
+          </tr>
+          <tr *ngFor="let ann of announcements">
+              <td>{{ann.name}}</td>
+              <td>{{ann.description}}</td>
+              <td><button class="btnreview" (click)="getBidsOfAnn(ann.id)">review</button></td>
+          </tr>
+          
+        </table>
+    
+ 
+
+  </div>
+
+
+
+  <div class="space">
+  </div>
+
+
+  <div class="desni">
+
+
+      <table style="width:60%" class="table">
+          <tr >
+            <th align="left">Username</th>
+            <th align="left">Offered</th>
+            <th align="left">Accept</th> 
+          </tr>
+          <tr *ngFor="let b of bids">
+              <td>{{b.user.name}}</td>
+              <td>{{b.offered}}</td>
+              <td><button>Accept</button></td>
+          </tr>
+          
+        </table>
+
+  </div>
+
+
+
+</div>

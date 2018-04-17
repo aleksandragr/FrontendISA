@@ -53,7 +53,7 @@ const routes: Routes = [
       {path: 'addAnnouncementt', component: AddAnnouncementComponent},
       {path: 'edituser', component: EditUserComponent},
       { path: 'reservation', component: ReservationComponent},
-      { path: 'mineAnnouncement', component: MineAnnouncementComponent}
+      { path: 'mineAnnouncement', component: MineAnnouncementComponent},
       { path: 'friends', component: FriendsComponent}
     ]
 

@@ -20,12 +20,9 @@ import { CinemalogComponent} from './components/cinemalog/cinemalog.component';
 import { EditThematicPropsComponent } from './components/edit-thematic-props/edit-thematic-props.component';
 import { AddAnnouncementComponent } from './components/add-announcement/add-announcement.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
-<<<<<<< HEAD
 import { MineAnnouncementComponent } from './components/mine-announcement/mine-announcement.component';
-=======
 import { FriendsComponent } from './components/friends/friends.component';
 import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
->>>>>>> d0dfcb065c47d2ac93bfad54de961f3eb836ea36
 
 
 
@@ -56,11 +53,8 @@ const routes: Routes = [
       {path: 'addAnnouncementt', component: AddAnnouncementComponent},
       {path: 'edituser', component: EditUserComponent},
       { path: 'reservation', component: ReservationComponent},
-<<<<<<< HEAD
       { path: 'mineAnnouncement', component: MineAnnouncementComponent}
-=======
       { path: 'friends', component: FriendsComponent}
->>>>>>> d0dfcb065c47d2ac93bfad54de961f3eb836ea36
     ]
 
 

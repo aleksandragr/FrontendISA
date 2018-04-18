@@ -199,7 +199,7 @@ export class CinemalogComponent implements OnInit {
     console.log(this.seatlist);
     this.reservationn.seats=this.seatlist;
     
-    
+    this.reservationn.projectionA=this.projection.name;
     this.reservationn.dateA=this.datee;
     console.log("smarass brt"+this.reservationn.dateA);
     this.projectionService.addReservation(this.reservationn)

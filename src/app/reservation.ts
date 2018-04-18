@@ -10,4 +10,5 @@ export class Reservation{
     seats: Seat[];
     user1: User;
     dateA: any;
+    projectionA: any;
 }

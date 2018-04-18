@@ -6,13 +6,25 @@
     
         <div class="row">
     
-          <div class="column left " style="background-color:lightblue;">
-    
-                <ul *ngFor="let reservation of reservations" type="square" class="ul" > 
-                    <li><span> {{reservation.id}}( {{reservation.projectionterm.term}})</span>   </li>
-                     <li  *ngFor="let seats of reservation.seats" class="cinema1">{{seats.id}}</li>     
+          <div class="column left ex3" style="background-color:lightblue;">
+              <div>
+                <div>
+                <ul *ngFor="let reservation of reservations"  class="ul" > 
+                    <div>
+                    <li class="slova"> Projection term: {{reservation.projectionterm.term}} {{reservation.dateA}} </li>        
+                    <div class="slova">Reserved seats:
+                     <p class="slova1" *ngFor="let seats of reservation.seats" > {{seats.ordinal}}</p>     
+                    </div>
+                    </div>
+                    <div class="remove">
+
+                            <button type="button" id={{reservation.id}} (click)="deleteReser(reservation.id)">Remove</button>
+                  
+                    </div>
                 </ul>
-    
+                </div>
+                
+              </div>
             
           </div>
     

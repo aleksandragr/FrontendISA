@@ -14,6 +14,7 @@ export class ReservationComponent implements OnInit {
 
   u: User;
   reservations: Reservation[];
+  reservation: Reservation;
   
   constructor(private reservationS: ReservationService,private loggedIn: LoggedinService) { }
 
@@ -25,5 +26,13 @@ export class ReservationComponent implements OnInit {
     .subscribe(reser => this.reservations=reser);
     
   }
+
+  deleteReser(id){
+    this.reservationS.removeReservation(id)
+    .subscribe(res => this.reservation=res);
+    location.reload();
+  }
+
+
 
 }

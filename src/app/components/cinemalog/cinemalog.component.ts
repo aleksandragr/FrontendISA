@@ -28,7 +28,7 @@ export class CinemalogComponent implements OnInit {
   projection: Projection;
   projectiondates: Projectiondate[];
   selectedItem: any;
-  projectiondate: Projectiondate;
+  projectiondatee: Projectiondate;
   projectionterms: Projectionterm[];
   selectedItem2: any;
   selectedItem3:any;
@@ -46,7 +46,8 @@ export class CinemalogComponent implements OnInit {
   seeat: Seat;
   seatlist= [];
   sediste: Seat;
-  
+  datee: Date;
+  datum: any;
   
   
 
@@ -100,8 +101,10 @@ export class CinemalogComponent implements OnInit {
 
   getProjectionTerms(): void{
     this.projectionService.getProjectionTerm(this.selectedItem2)
-    .subscribe(projectiondate => {this.projectiondate=projectiondate;
-    this.projectionterms=this.projectiondate.projectionTerms;
+    .subscribe(projectiondate => {this.projectiondatee=projectiondate;
+    this.datee=this.projectiondatee.date;
+    console.log("dateeee"+this.datee);
+    this.projectionterms=this.projectiondatee.projectionTerms;
     });
   }
 
@@ -138,7 +141,7 @@ export class CinemalogComponent implements OnInit {
     .subscribe(ptt => {this.projectionterm=ptt;
     this.price=this.projectionterm.price;
     this.halll=this.projectionterm.hall.ordinal;
-    
+    console.log("iiiiiii");
     });
   }
 
@@ -191,8 +194,14 @@ export class CinemalogComponent implements OnInit {
     console.log(ua);
     this.reservationn.user1=ua;
     this.reservationn.projectionterm=this.projectionterm;
+    
+    
     console.log(this.seatlist);
     this.reservationn.seats=this.seatlist;
+    
+    
+    this.reservationn.dateA=this.datee;
+    console.log("smarass brt"+this.reservationn.dateA);
     this.projectionService.addReservation(this.reservationn)
     .subscribe(data => this.reservationn = data);
     location.reload();

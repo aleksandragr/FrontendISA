@@ -9,4 +9,5 @@ export class Reservation{
     projectionterm: Projectionterm;
     seats: Seat[];
     user1: User;
+    dateA: any;
 }

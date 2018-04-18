@@ -1,8 +1,7 @@
 <div>
 
   <div>
-      <h1 align="center">Notification</h1>
-      <hr>
+      <h1 >Notification</h1>
   </div>
 
   <div class="levi ex3">
@@ -28,8 +27,41 @@
 
   <div class="desni">
 
-    <p>aaaaaaaaaaa</p>
+    <h4 align="center">Approval announcement</h4>
 
+    <div class="viewAnn ex3">
+     
+      <ul *ngFor="let notifi of adminNotifications">
+        
+        <div class="oneann">
+          <p class="text">Get an announcement '{{notifi.announcement.name}}' for review!</p>
+        </div>
+
+        <div class="appovelann">
+          <button (click)="adminPreuzimaOglasNaSebe(notifi.announcement.id,notifi.announcement)" onclick="enableApprove()">Get ann</button>
+        </div>
+
+        <hr>
+      </ul>
+
+    </div>
+
+
+    <div class="odobravanjeOglasa">
+
+      <div class="ispis">
+         {{ann.ime}}{{ann.name}}<br>
+         {{ann.opis}}{{ann.description}}<br>
+         {{ann.datum}}{{ann.date}}<br>
+      </div>
+
+      <div class="dugme">
+        <button id="approvebtn" (click)="approveAnnouncement()" disabled>Approve</button>
+      </div>
+    </div>
+
+
+  
 
 
   </div>

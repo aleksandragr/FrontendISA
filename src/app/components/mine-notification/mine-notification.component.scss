@@ -11,11 +11,11 @@
 
 
 .levi{
-    background: aquamarine;
+    background-color: lightblue;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 0px;
     width: 600px;
-    height: 600px;
+    height: 570px;
 }
 
 .space{
@@ -23,14 +23,60 @@
 }
 
 .desni{
-    background: blue;
+    background-color: lightblue;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 0px;
     width: 600px;
+    height: 570px;
     vertical-align: top;
+    margin-left: 70px;
 }
 
 
 div.ex3 {
     overflow: auto;
+}
+
+.viewAnn{
+    height: 350px;
+    background: rgb(79, 182, 250);
+}
+
+
+.oneann{
+    height: 54px;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+.text{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.appovelann{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.odobravanjeOglasa{
+    background: aqua;
+    height: 160px; 
+}
+
+.ispis{
+  display: inline-block;
+  font-size: 1.1em;
+  width: 320px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 35px;
+  margin-left: 70px;
+}
+
+.dugme{
+    background: chartreuse;
+    display: inline-block;
+    margin-left: 30px;
+    vertical-align: top;
+    margin-top: 57px;
 }

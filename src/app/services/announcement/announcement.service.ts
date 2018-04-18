@@ -42,4 +42,19 @@ export class AnnouncementService {
     return this.Http.get<any>('http://localhost:4567/announcement/getAnnauncementsOfUser/' + id);
 
   }
+
+
+  annOnAdmin(id,an): Observable<any>{
+
+    return this.Http.get<any>('http://localhost:4567/announcement/getAnnOnAdmin/' + id + '/' + an);
+
+  }
+
+
+  approveAnn(an): Observable<any>{
+
+    return this.Http.get<any>('http://localhost:4567/announcement/approveAnnouncement/' + an);
+    
+  }
+
 }

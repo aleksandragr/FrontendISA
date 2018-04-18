@@ -45,7 +45,7 @@
           <tr *ngFor="let b of bids">
               <td>{{b.user.name}}</td>
               <td>{{b.offered}}</td>
-              <td><button (click)="acceptBidNoti(b.user)" (click)="notAcceptBid(b.id)">Accept</button></td>
+              <td><button (click)="acceptBidNoti(b.user)" [disabled]="b.accept" (click)="notAcceptBid(b.id)">Accept</button></td>
           </tr>
           
         </table>

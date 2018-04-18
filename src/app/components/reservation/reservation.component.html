@@ -11,7 +11,8 @@
                 <div>
                 <ul *ngFor="let reservation of reservations"  class="ul" > 
                     <div>
-                    <li class="slova"> Projection term: {{reservation.projectionterm.term}} {{reservation.dateA}} </li>        
+                    <li class="slova"> Projection: {{reservation.projectionA}}</li>        
+                    <p class="slova"> Projection term: {{reservation.dateA}} {{reservation.projectionterm.term}}</p>     
                     <div class="slova">Reserved seats:
                      <p class="slova1" *ngFor="let seats of reservation.seats" > {{seats.ordinal}}</p>     
                     </div>
@@ -21,6 +22,7 @@
                             <button type="button" id={{reservation.id}} (click)="deleteReser(reservation.id)">Remove</button>
                   
                     </div>
+                    
                 </ul>
                 </div>
                 

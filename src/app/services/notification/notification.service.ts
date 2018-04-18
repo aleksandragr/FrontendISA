@@ -14,9 +14,9 @@ export class NotificationService {
 
 
 
-  acceptBidNotification(noti): Observable<any>{
+  acceptBidNotification(noti,idann): Observable<any>{
 
-    return this.http.put<any>('http://localhost:4567/notification/newNotification', noti, httpOptions );
+    return this.http.put<any>('http://localhost:4567/notification/newNotification/' + idann, noti, httpOptions );
 
   }
 

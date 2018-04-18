@@ -55,7 +55,7 @@ export class MineAnnouncementComponent implements OnInit {
     this.notisend.description = "Your offer on announcement '" + this.nazivOglasa + "' is accepted!";
     this.notisend.usertwo = user2;
     this.notisend.type = "Accept bid";
-    this.notificationService.acceptBidNotification(this.notisend)
+    this.notificationService.acceptBidNotification(this.notisend,this.idOfAnn)
     .subscribe(data => this.notification = data);
     
   }

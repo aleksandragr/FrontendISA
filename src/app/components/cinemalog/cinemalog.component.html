@@ -50,6 +50,8 @@
           </div>
           <div class="space1">         
           </div>
+        <form>
+        <div>
           <div>
             <label class="label">Projection term</label>
             <select id = "myList3" class="combobox" (change)="selectChangeHandler3($event)">
@@ -66,18 +68,30 @@
               <input type="text" value={{halll}} class="in" disabled>
               <label class="sp"></label>
               <label class="labelp">Price</label>
-              <input type="text" value={{price}} class="in" disabled>    
+              <input type="text" value={{price}} class="in" disabled>  
+                
           </div>
           <div class="space1">  
           </div>       
-          <div>
-              <label class="label">Seats</label>
-              <div class="buttons">
-              <button   *ngFor="let s of seatss"  [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
+          <div class="i">
+              <label class=" label">Seats</label>
+              <div>
+              <div class="column1 buttons">
+              <button   *ngFor="let s of seatss" (change)="selectChangeHandler4($event)" value="{{s.id}}" [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
+              
+              
               </div>
-               
+              <div>
+                <input class="column1 submit" type="submit" value="Ok"  (click)="addReser()">
+              </div>
+              </div>
+              
           </div>
-          
+        </div>
+
+        
+
+        </form>
 
         </div>
         

@@ -1,3 +1,5 @@
+import { Reservation } from "./reservation";
+
 export class User{
 
     id: number;
@@ -9,6 +11,7 @@ export class User{
     repeatPassword: string;
     city: string;
     phoneNumber: string;
+    reservations: Reservation[];
 
 
 }

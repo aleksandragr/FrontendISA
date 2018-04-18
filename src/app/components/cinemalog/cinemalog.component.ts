@@ -11,6 +11,8 @@ import { Hall } from '../../hall';
 import { Seat } from '../../seat';
 import { LoggedinService } from '../../services/loggedin/loggedin.service';
 import { NgIf } from '@angular/common';
+import { Reservation } from '../../reservation';
+import { User } from '../../user';
 
 
 @Component({
@@ -37,6 +39,13 @@ export class CinemalogComponent implements OnInit {
   seats:Seat[];
   seatss:Seat[];
   reservedSeat: Seat;
+  seat: Seat;
+  reservationn: any={};
+  user: User;
+  selectedItem4: any;
+  seeat: Seat;
+  seatlist= [];
+  sediste: Seat;
   
   
   
@@ -115,6 +124,15 @@ export class CinemalogComponent implements OnInit {
     });
   }
 
+  getSeat(): void{
+    this.projectionService.getSeat(this.seeat)
+    .subscribe(seatt1 => {this.sediste=seatt1;
+    console.log(this.sediste);//celo sediste
+    this.seatlist.push(this.sediste);
+    console.log(this.seatlist);
+    });
+  }
+
   getProjectionterm(): void{
     this.projectionService.getProjectionterm(this.selectedItem3)
     .subscribe(ptt => {this.projectionterm=ptt;
@@ -134,6 +152,12 @@ export class CinemalogComponent implements OnInit {
     this.getSeats();
   }
 
+  selectChangeHandler4(event:any){
+    this.selectedItem4=event.target.value;
+    console.log(this.selectedItem4);
+    console.log("saska");
+  }
+
   getSeats(): void{
     this.projectionService.getSeats(this.selectedItem3)
     .subscribe(ss => {this.seatss=ss})
@@ -142,11 +166,36 @@ export class CinemalogComponent implements OnInit {
 
   reservingSeat(seat): void{
     var ua = this.loggedIn.getLocalStore();
-    
+    this.seeat=seat;
+    var rs = this.seeat;
+    console.log(this.seeat);
+    console.log(rs);
+    var broj="1";
+    var lista =[];
+    lista.push(broj);
+    console.log(lista);
+
+
+    this.getSeat();
+
+
+
+    //this.seatlist.push(this.seeat);
     this.projectionService.reserveSeat(ua.id,seat)
     .subscribe(data => this.reservedSeat = data);
 
+  }
 
+  addReser(): void{
+    var ua = this.loggedIn.getLocalStore();
+    console.log(ua);
+    this.reservationn.user1=ua;
+    this.reservationn.projectionterm=this.projectionterm;
+    console.log(this.seatlist);
+    this.reservationn.seats=this.seatlist;
+    this.projectionService.addReservation(this.reservationn)
+    .subscribe(data => this.reservationn = data);
+    location.reload();
   }
 
 

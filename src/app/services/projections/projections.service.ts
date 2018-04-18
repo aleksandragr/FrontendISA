@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Projection } from '../../projection';
+import { Reservation } from '../../reservation';
 import { Projectiondate } from '../../projectiondate';
+import { Seat } from '../../seat';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
@@ -55,5 +57,26 @@ export class ProjectionsService {
     return this.http.get<any>('http://localhost:4567/seat/getSeats/'+id);
 
   }
+
+  addReservation(reser: Reservation): Observable<any>{
+
+    console.log("aloooo");
+    return this.http.put<any>('http://localhost:4567/reservation/addReservation', reser, httpOptions);
+
+  }
+
+  getSeat(id):Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/seat/'+id);
+
+  }
+
+  addSeat(s: Seat): Observable<any>{
+
+    return this.http.put<any>('http://localhost:4567/seat/addSeat', s, httpOptions);
+
+  }
+
+
 
 }

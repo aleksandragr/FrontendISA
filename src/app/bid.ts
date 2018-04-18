@@ -7,7 +7,7 @@ export class bid{
     offered: string;
     user: User;
     announcement: announcement;
-
+    accept: boolean;
 }
 
 

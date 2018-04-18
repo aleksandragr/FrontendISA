@@ -40,6 +40,7 @@ import { FriendsComponent } from './components/friends/friends.component';
 import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
 import { NotificationService } from './services/notification/notification.service';
 import { MineNotificationComponent } from './components/mine-notification/mine-notification.component';
+import { ReservationService } from './services/reservation/reservation.service';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,7 @@ import { MineNotificationComponent } from './components/mine-notification/mine-n
     Ng2Webstorage
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
-    AnnouncementService,BidService,NotificationService],
+    AnnouncementService,BidService,NotificationService,ReservationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

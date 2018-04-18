@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ReservationService} from '../../services/reservation/reservation.service';
+import { LoggedinService } from '../../services/loggedin/loggedin.service';
+import { User } from '../../user';
+import { Reservation } from '../../reservation';
 
 
 @Component({
@@ -8,14 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservationComponent implements OnInit {
 
- 
-
+  u: User;
+  reservations: Reservation[];
   
-  constructor() { }
+  constructor(private reservationS: ReservationService,private loggedIn: LoggedinService) { }
 
   ngOnInit() {
     
-     
+    var ua = this.loggedIn.getLocalStore();
+    this.u=ua;
+    this.reservationS.getReservation(this.u.id)
+    .subscribe(reser => this.reservations=reser);
     
   }
 

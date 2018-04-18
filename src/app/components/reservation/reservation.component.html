@@ -8,7 +8,10 @@
     
           <div class="column left " style="background-color:lightblue;">
     
-            
+                <ul *ngFor="let reservation of reservations" type="square" class="ul" > 
+                    <li><span> {{reservation.id}}( {{reservation.projectionterm.term}})</span>   </li>
+                     <li  *ngFor="let seats of reservation.seats" class="cinema1">{{seats.id}}</li>     
+                </ul>
     
             
           </div>

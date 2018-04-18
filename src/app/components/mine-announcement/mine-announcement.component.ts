@@ -18,6 +18,9 @@ export class MineAnnouncementComponent implements OnInit {
   notification: Notification;
   notisend: any={};
   nazivOglasa: string;
+  notiNoAccept: any={};
+  idOfAnn: any;
+  notifications: Notification[];
 
   announcements: announcement[];
   constructor(private announcementService: AnnouncementService,
@@ -36,9 +39,10 @@ export class MineAnnouncementComponent implements OnInit {
   
   }
 
-  getBidsOfAnn(id,name): void{
+  getBidsOfAnn(id,name,idAnn): void{
     this.bids = [];
     this.nazivOglasa = name;
+    this.idOfAnn = idAnn;
     this.announcementService.getBidsOfAnnouncement(id)
     .subscribe(data => this.bids = data);
 
@@ -46,12 +50,30 @@ export class MineAnnouncementComponent implements OnInit {
 
 
   acceptBidNoti(user2): void{
+
     this.notisend.userone = this.user;
-    this.notisend.description = "Your offer on announcement '" + this.nazivOglasa + "' is accepted";
+    this.notisend.description = "Your offer on announcement '" + this.nazivOglasa + "' is accepted!";
     this.notisend.usertwo = user2;
-    
+
     this.notificationService.acceptBidNotification(this.notisend)
     .subscribe(data => this.notification = data);
     
   }
+
+  notAcceptBid(bidid): void{
+
+
+    this.notificationService.noAccepBid(this.user.id,this.idOfAnn,bidid)
+    .subscribe(data => this.notifications = data);
+
+
+
+  }
+
+
+  
+
+
+
+
 }

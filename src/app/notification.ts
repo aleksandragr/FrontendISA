@@ -1,4 +1,5 @@
 import { User } from "./user";
+import { bid } from "./bid";
 
 export class notification{
 
@@ -7,6 +8,6 @@ export class notification{
     userone: User;
     usertwo: User;
     type: string;
-
+    bid: bid;
 
 }

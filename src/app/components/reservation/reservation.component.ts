@@ -24,7 +24,7 @@ export class ReservationComponent implements OnInit {
     this.u=ua;
     this.reservationS.getReservation(this.u.id)
     .subscribe(reser => this.reservations=reser);
-    
+  
   }
 
   deleteReser(id){

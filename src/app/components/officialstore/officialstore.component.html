@@ -2,8 +2,8 @@
 
   <div class="addTP">
 
-    <button class="btnadd" ><a [routerLink]="['../../addthematicprops']" style='text-decoration:none;'>Add thematic props</a></button>
-    <button class="btnadd" ><a [routerLink]="['../../editthematicprops']" style='text-decoration:none'>Edit thematic props</a></button>
+    <button *ngIf="user?.role==='adminF'"   class="btnadd" ><a [routerLink]="['../../addthematicprops']" style='text-decoration:none;'>Add thematic props</a></button>
+    <button *ngIf="user?.role==='adminF'"  class="btnadd" ><a [routerLink]="['../../editthematicprops']" style='text-decoration:none'>Edit thematic props</a></button>
 
 
   </div>
@@ -27,7 +27,7 @@
 
       <div class="remove">
 
-          <button type="button" id={{prop.id}} class="btnremove" (click)="removeProps(prop.id)">Remove</button>
+          <button *ngIf="user?.role==='adminF'" type="button" id={{prop.id}} class="btnremove" (click)="removeProps(prop.id)">Remove</button>
 
       </div>
 

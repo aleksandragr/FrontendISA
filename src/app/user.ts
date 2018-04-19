@@ -12,6 +12,7 @@ export class User{
     city: string;
     phoneNumber: string;
     reservations: Reservation[];
-
+    role: string;
+    adminFchangep: string;
 
 }

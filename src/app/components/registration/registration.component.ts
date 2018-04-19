@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   register(): void {
-
+    this.userr.role = "user";
     this.userService.registerUser(this.userr).
     subscribe(user => { this.userr = user;
       this.router.navigate(['/login']);

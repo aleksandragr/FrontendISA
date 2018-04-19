@@ -20,12 +20,14 @@ export class OfficialstoreComponent implements OnInit {
   propid: thematicprops;
   reservedProp: thematicprops;
   id: any;
-  u: User;
+  user: User;
   
 
 
   ngOnInit() {
 
+    this.user = this.loggedIn.getLocalStore();
+    console.log("aaaaaaaa " +this.user.role);
     this.thematicpropsService.getThematicProps()
       .subscribe(props => this.props = props);
 

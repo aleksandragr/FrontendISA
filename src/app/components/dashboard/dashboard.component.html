@@ -1,6 +1,6 @@
    
-   
-   <div class="tab">
+   <div *ngIf="u?.adminFchangep==='yes'">
+   <div  class="tab">
 
         <button class="dugme"><a [routerLink]="['homepage']" style='text-decoration:none;'>Home page</a></button>
         <button class="dugme"><a [routerLink]="['cinemaslog']" style='text-decoration:none;'>Cinema</a></button>
@@ -12,11 +12,68 @@
         
     </div>
 
-        <button class="buttonN"><a [routerLink]="['notification']" style='text-decoration:none;'>Notification</a></button>
-        <button class="buttonL" (click)="logoutFun()">Logout</button>
+    
+
+    </div>
+         <button *ngIf="u?.adminFchangep==='yes'" class="buttonN"><a [routerLink]="['notification']" style='text-decoration:none;'>Notification</a></button>
+         <button class="buttonL" (click)="logoutFun()">Logout</button>
     
 
 
+    
 
+    <div *ngIf="u?.adminFchangep==='no'">
+
+        <div class="column right" style="background-color:lightblue;">
+                  
+            <label class="label3">Edit password</label>
+            <div >
+                
+                <div class="space1">  
+                </div>
+
+                    <form (ngSubmit)="register">
+                    <div class="column">
+                      <div>
+                        <label class="label">Email</label>
+                        <input type="text" [(ngModel)]="u.email" name="email" class="in" disabled>
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                        
+                        <label  class="label">Current password</label>
+                        <input type="text" [(ngModel)]="pass" name="password" class="in" #passw required>
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                        
+                        <label  class="label">New password</label>
+                        <input type="text" [(ngModel)]="newpp" name="newPassword" class="in" #newp required>
+                      </div>
+                      <div class="space2"></div>
+                      <div>
+                          <label class="label">Repeat password</label>
+                          <input type="text" [(ngModel)]="currp" name="repeatPassword" class="in" #repp required>
+                      </div>
+                      <div class="space2"></div>
+                      
+                      
+                      <input class="submit" type="submit"  value="Edit "   (click)="editPassword(); passw.value=''; newp.value='';repp.value='' " >
+                    </div>
+
+                    
+                  </form>
+
+
+
+                
+            </div>
+              
+      
+        </div>
+
+
+
+    </div>
 
 <router-outlet></router-outlet>

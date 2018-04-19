@@ -1,0 +1,130 @@
+<div>
+
+
+
+  <div class="levi"> 
+
+      <h4 align="center">Add cinema or theatre</h4>
+
+    <div class="label">
+      <p>Name:</p>
+    </div>
+    <div class="input">
+      <input class="in" type="text" [(ngModel)]="newCinemaTheatre.name" placeholder="Name" name="name" #namerr>
+    </div>
+   
+    <div class="label">
+      <p>Description:</p>
+    </div>
+    <div class="input">
+      <input class="in" type="text" [(ngModel)]="newCinemaTheatre.description"  placeholder="Description" name="description" #descriptionrr>
+    </div>
+
+    <div class="label">
+      <p>Address:</p>
+    </div>
+    <div class="input">
+      <input class="in" type="text" [(ngModel)]="newCinemaTheatre.address"  placeholder="Address" name="addressr" #addressrr>
+    </div>
+
+    <div class="label">
+      <p>Cinema/Theatre:</p>
+    </div>
+    <div class="input">
+      <select [(ngModel)]="newCinemaTheatre.cinema" class="in" name="cinemaTheatre" id="cinemaTheatreid">
+          <option value="" selected hidden>Cinema or theatre</option>
+          <option value="cinema">cinema</option>
+          <option value="theatre">theatre</option>
+      </select>
+     
+    </div>
+
+
+    <div class="btnCinema">
+      <button class="ok" (click)="addCinemaT(); namerr.value=''; addressrr.value=''; descriptionrr.value=''">OK</button>
+    </div>
+
+  </div>
+
+  <div class="space"></div>
+
+  <div class="desni">
+      <h4 align="center">Add persone</h4>
+      <div class="label">
+          <p>Email:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.email" placeholder="Email" name="email" #emailr>
+      </div>
+
+      <div class="label">
+          <p>Name:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.name" placeholder="Name" name="name" #namer>
+      </div>
+
+      <div class="label">
+          <p>Surname:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.surname" placeholder="Surname" name="surname" #surnamer>
+      </div>
+
+      <div class="label">
+          <p>Password:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.password" placeholder="Password" name="password" #Passwordr>
+      </div>
+
+      <div class="label">
+          <p>City:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.city" placeholder="City" name="city" #cityr>
+      </div>
+      
+      <div class="label">
+          <p>Address:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.address" placeholder="Address" name="address" #addressr>
+      </div>
+
+      <div class="label">
+          <p>Phone number:</p>
+        </div>
+        <div class="input">
+          <input class="in" type="text" [(ngModel)]="newPersone.phoneNumber" placeholder="Phone number" name="phonenumber" #phonenumberr>
+      </div>
+
+      <div class="label">
+          <p>Role:</p>
+        </div>
+        <div class="input">
+            <select [(ngModel)]="newPersone.role"  class="in" name="cinemaTheatre" id="cinemaTheatreid">
+                <option value="" selected hidden>Role</option>
+                <option value="adminF">adminF</option>
+                <option value="adminS">adminS</option>
+                <option value="adminCT">adminCT</option>
+            </select>
+      </div>
+
+      <div class="dugmeC">
+        <button class="ok" (click)="addP();  namer.value=''; surnamer.value=''; emailr.value=''; addressr.value=''; Passwordr.value=''; cityr.value=''; phonenumberr.value='';">Ok</button>
+      </div>
+    
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>

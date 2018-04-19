@@ -24,6 +24,7 @@ import { MineAnnouncementComponent } from './components/mine-announcement/mine-a
 import { FriendsComponent } from './components/friends/friends.component';
 import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
 import { MineNotificationComponent } from './components/mine-notification/mine-notification.component';
+import { AdminsystemComponent } from './components/adminsystem/adminsystem.component';
 
 
 
@@ -56,7 +57,8 @@ const routes: Routes = [
       { path: 'reservation', component: ReservationComponent},
       { path: 'mineAnnouncement', component: MineAnnouncementComponent},
       { path: 'friends', component: FriendsComponent},
-      { path: 'notification', component: MineNotificationComponent}
+      { path: 'notification', component: MineNotificationComponent},
+      { path: 'adminsystem', component: AdminsystemComponent}
     ]
 
 

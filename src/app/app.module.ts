@@ -41,6 +41,8 @@ import { TheatrelogComponent } from './components/theatrelog/theatrelog.componen
 import { NotificationService } from './services/notification/notification.service';
 import { MineNotificationComponent } from './components/mine-notification/mine-notification.component';
 import { ReservationService } from './services/reservation/reservation.service';
+import { AdminsystemComponent } from './components/adminsystem/adminsystem.component';
+import { AdminsystemService } from './services/adminsystem/adminsystem.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,8 @@ import { ReservationService } from './services/reservation/reservation.service';
     MineAnnouncementComponent,
     FriendsComponent,
     TheatrelogComponent,
-    MineNotificationComponent
+    MineNotificationComponent,
+    AdminsystemComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,7 @@ import { ReservationService } from './services/reservation/reservation.service';
     Ng2Webstorage
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
-    AnnouncementService,BidService,NotificationService,ReservationService],
+    AnnouncementService,BidService,NotificationService,ReservationService,AdminsystemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

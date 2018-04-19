@@ -5,5 +5,5 @@ export class Cinema{
     name: string;
     rating: string;
     description: string;
-    
+    cinema: string;
 }

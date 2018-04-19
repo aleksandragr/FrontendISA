@@ -15,6 +15,9 @@
     
 
     </div>
+        <div class="pom">
+         <button *ngIf="u?.role==='adminS'" class="buttonA"><a [routerLink]="['adminsystem']" style="text-decoration: none">Admin system</a></button>
+        </div>
          <button *ngIf="u?.adminFchangep==='yes'" class="buttonN"><a [routerLink]="['notification']" style='text-decoration:none;'>Notification</a></button>
          <button class="buttonL" (click)="logoutFun()">Logout</button>
     

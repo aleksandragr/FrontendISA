@@ -14,5 +14,4 @@ export class User{
     reservations: Reservation[];
     role: string;
     adminFchangep: string;
-
 }

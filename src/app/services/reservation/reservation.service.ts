@@ -15,6 +15,8 @@ export class ReservationService {
 
   getReservation(id): Observable<any>{
 
+    console.log("aaaa");
+    console.log(id);
     return this.http.get<any>('http://localhost:4567/reservation/getReservations/'+id);
 
   }
@@ -22,6 +24,12 @@ export class ReservationService {
   removeReservation(id): Observable<any>{
 
     return this.http.post<any>('http://localhost:4567/reservation/removeReser/' + id, id, httpOptions);
+
+  }
+
+  getHistory(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/reservation/getHistory/'+id);
 
   }
 }

@@ -40,6 +40,17 @@
     </div>
 
 
+    <div class="label">
+        <p>Admin:</p>
+    </div>
+    <div class="input">
+    <select (change)="selectChangeHandler($event)" name="adminn" id="adminn" class="in">
+        <option value="" selected hidden>Choose admin</option>
+      <option  *ngFor="let admi of adminsOfCinema" value="{{admi.id}}">{{admi.name}}</option>
+    </select>
+    </div>
+
+
     <div class="btnCinema">
       <button class="ok" (click)="addCinemaT(); namerr.value=''; addressrr.value=''; descriptionrr.value=''">OK</button>
     </div>

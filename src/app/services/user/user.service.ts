@@ -39,6 +39,13 @@ export class UserService {
 
   }
 
+  getUserOfId(id): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/user/getUserOfId/' + id);
+
+
+  }
+
 
 
 }

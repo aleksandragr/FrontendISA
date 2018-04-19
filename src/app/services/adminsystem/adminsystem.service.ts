@@ -26,6 +26,12 @@ export class AdminsystemService {
     return this.Http.put<any>('http://localhost:4567/user/addAdmin', user, httpOptions);
 
   }
+
+  getAdminsOfCinemaT(): Observable<any>{
+
+    return this.Http.get<any>('http://localhost:4567/user/getAdminsOfCinemaT');
+
+  }
  
 
 }

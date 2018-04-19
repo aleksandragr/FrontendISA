@@ -1,3 +1,5 @@
+import { User } from "./user";
+
 export class Cinema{
 
     id: number;
@@ -6,4 +8,5 @@ export class Cinema{
     rating: string;
     description: string;
     cinema: string;
+    admin: User;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminsystemService } from '../../services/adminsystem/adminsystem.service';
 import { Cinema } from '../../cinema';
 import { User } from '../../user';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-adminsystem',
@@ -15,10 +16,18 @@ export class AdminsystemComponent implements OnInit {
 
   newPersone: any={};
   user: User;
-  constructor(private adminsystemaService: AdminsystemService) { }
+  selektovanId: any;
+  adminsOfCinema: User[];
+  administrator: User;
+
+  constructor(private adminsystemaService: AdminsystemService,
+          private userService: UserService
+  ) { }
 
   ngOnInit() {
 
+    this.adminsystemaService.getAdminsOfCinemaT()
+    .subscribe(data => this.adminsOfCinema = data);
   }
 
 
@@ -36,8 +45,20 @@ export class AdminsystemComponent implements OnInit {
 
   }
 
+  
+  selectChangeHandler (event : any){
 
 
+    this.selektovanId =  event.target.value;
+    
+    this.userService.getUserOfId(this.selektovanId)
+    .subscribe(data =>{ this.administrator = data;
+      this.newCinemaTheatre.admin = this.administrator;
+      console.log("aaaaaaaaaaa " + this.newCinemaTheatre.admin.id);
+    });
+    
+  
+  }
   
  
 

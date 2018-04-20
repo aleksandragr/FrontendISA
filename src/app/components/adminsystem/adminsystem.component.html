@@ -50,6 +50,9 @@
     </select>
     </div>
 
+    <div class="googlemaps">
+    <agm-map [longitude]="longitude" [latitude]="latitude"></agm-map>
+  </div>
 
     <div class="btnCinema">
       <button class="ok" (click)="addCinemaT(); namerr.value=''; addressrr.value=''; descriptionrr.value=''">OK</button>

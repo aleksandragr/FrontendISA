@@ -12,7 +12,8 @@ import { Cinema } from '../../cinema';
 export class CinemaComponent implements OnInit {
 
   cinemas: Cinema[];
-
+  latitude = 51.678418;
+  longitude = 7.809007;
   
   constructor(private cinemaService: CinemaService) { }
 

@@ -44,6 +44,7 @@ import { ReservationService } from './services/reservation/reservation.service';
 import { AdminsystemComponent } from './components/adminsystem/adminsystem.component';
 import { AdminsystemService } from './services/adminsystem/adminsystem.service';
 import { ScaleComponent } from './components/scale/scale.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,10 @@ import { ScaleComponent } from './components/scale/scale.component';
     HttpClientModule,
     FormsModule,
     StorageServiceModule,
-    Ng2Webstorage
+    Ng2Webstorage,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD2EWmNiar9RoZUKwUgUWmXtGFe5ICGgjQ'
+    })
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
     AnnouncementService,BidService,NotificationService,ReservationService,AdminsystemService],

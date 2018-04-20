@@ -7,8 +7,8 @@
   
       <ul *ngFor="let cinema of cinemas" type="square" class="ul" > 
         <li><p><span class="cinema1"> {{cinema.name}}</span> <br> <span class="cinema2">({{cinema.address}}, {{cinema.description}}, {{cinema.rating}})  </span> </p> </li>
-          
+        
       </ul>
       
-    
+      <agm-map [longitude]="longitude" [latitude]="latitude"></agm-map>
   </div>

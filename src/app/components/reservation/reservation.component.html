@@ -19,7 +19,8 @@
                     </div>
                     <div class="remove">
 
-                            <button type="button" id={{reservation.id}} (click)="deleteReser(reservation.id)">Remove</button>
+                            <button type="button" id={{reservation.id}} (click)="deleteReser(reservation.id)">Remove     </button>
+                            <button type="button" id={{reservation.id}} (click)="getUsers(reservation.id)">Invite friends</button>
                   
                     </div>
                     
@@ -28,6 +29,25 @@
                 
               </div>
             
+          </div>
+
+          <div class="column space">
+
+          </div>
+  
+          <div class="column right ex3" style="background-color:lightblue;">
+            <label class="label3">List of friends</label>
+            <div>
+            <ul *ngFor="let user of users" type="square" class="ul" > 
+                <div>
+                <li><p><span class="slova"> {{user.email}}</span>   </p> </li>
+                </div> 
+                <div>
+                    <button (click)="inviteFriends(user.id)">Invite</button>
+                </div>
+            </ul>
+            </div>
+  
           </div>
     
 

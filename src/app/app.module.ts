@@ -43,6 +43,7 @@ import { MineNotificationComponent } from './components/mine-notification/mine-n
 import { ReservationService } from './services/reservation/reservation.service';
 import { AdminsystemComponent } from './components/adminsystem/adminsystem.component';
 import { AdminsystemService } from './services/adminsystem/adminsystem.service';
+import { ScaleComponent } from './components/scale/scale.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { AdminsystemService } from './services/adminsystem/adminsystem.service';
     FriendsComponent,
     TheatrelogComponent,
     MineNotificationComponent,
-    AdminsystemComponent
+    AdminsystemComponent,
+    ScaleComponent
   ],
   imports: [
     BrowserModule,

@@ -25,6 +25,7 @@ import { FriendsComponent } from './components/friends/friends.component';
 import { TheatrelogComponent } from './components/theatrelog/theatrelog.component';
 import { MineNotificationComponent } from './components/mine-notification/mine-notification.component';
 import { AdminsystemComponent } from './components/adminsystem/adminsystem.component';
+import { ScaleComponent } from './components/scale/scale.component';
 
 
 
@@ -58,7 +59,8 @@ const routes: Routes = [
       { path: 'mineAnnouncement', component: MineAnnouncementComponent},
       { path: 'friends', component: FriendsComponent},
       { path: 'notification', component: MineNotificationComponent},
-      { path: 'adminsystem', component: AdminsystemComponent}
+      { path: 'adminsystem', component: AdminsystemComponent},
+      { path: 'scale', component: ScaleComponent}
     ]
 
 

@@ -51,7 +51,9 @@
     </div>
 
     <div class="googlemaps">
-    <agm-map [longitude]="longitude" [latitude]="latitude"></agm-map>
+    <agm-map [longitude]="longitude" [latitude]="latitude" (mapClick)="OnChoseLocation($event)">
+      <agm-marker [longitude]="longitude" [latitude]="latitude"></agm-marker>
+    </agm-map>
   </div>
 
     <div class="btnCinema">

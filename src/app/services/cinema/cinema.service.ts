@@ -30,5 +30,11 @@ export class CinemaService {
     return this.http.get<any>('http://localhost:4567/cinematheatre/' + id);
   }
 
+  getTheatres(): Observable<any>{
+
+    return this.http.get<any>('http://localhost:4567/cinematheatre/getTheatres');
+
+  }
+
 
 }

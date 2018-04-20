@@ -1,3 +1,97 @@
-<p>
-  theatrelog works!
-</p>
+<div>
+  <div>
+    <h1 class="header">Reservation tickets</h1>
+  </div>
+  <hr>
+
+  <div class="row">
+      <div class="column left ex3" style="background-color:lightblue;">
+          <table style="width:100%" class="table">
+              <tr >
+                <th align="left">Name</th>
+                <th align="left">Address</th> 
+                <th align="left">Description</th>
+                <th align="left">Rating</th>
+                <th align="left">Repertory</th>
+              </tr>
+              <tr *ngFor="let cinema of theatres" >
+                  <td>{{cinema.name}} </td>
+                  <td>{{cinema.address}}</td> 
+                  <td>{{cinema.description}}</td>
+                  <td>{{cinema.rating}}</td>
+                  <td><button id="{{cinema.id}}"  (click)="getProjections(cinema.id) " value="Reset" onclick="Reset();">Repertory</button></td>
+              </tr>
+              
+            </table>
+          
+      </div>
+      <div class="column space">
+      </div>
+      <div class="column right " style="background-color: lightblue;">
+          <div>
+            <label class="label">Projection</label>            
+            <select id = "myList1" class="combobox" (change)="selectChangeHandler($event)" >
+                <option class="option0" value="0" selected hidden>Choose projection</option>
+                <option class="option"  *ngFor="let proj of projections" value="{{proj.id}}">{{proj.name}}</option>               
+            </select>
+ 
+          </div>
+          <div class="space1">         
+          </div>
+          <div>
+            <label class="label">Projection date</label>
+            <select id = "myList2" class="combobox" (change)="selectChangeHandler2($event)">
+                <option class="option0" value="0" selected hidden>Choose projection date</option>
+                <option id="2" class="option" *ngFor="let pd of projectiondates" value = "{{pd.id}}">{{pd.date}}</option>               
+            </select>
+              
+          </div>
+          <div class="space1">         
+          </div>
+        <form>
+        <div>
+          <div>
+            <label class="label">Projection term</label>
+            <select id = "myList3" class="combobox" (change)="selectChangeHandler3($event)">
+                <option class="option0" value="0" selected hidden>Choose projection term</option>
+                <option id="3" class="option" *ngFor="let pt of projectionterms" value = "{{pt.id}}">{{pt.term}}</option>  
+                 
+            </select>
+               
+          </div>
+          <div class="space1">  
+          </div>       
+          <div>
+              <label class="label">Hall</label>
+              <input type="text" value={{halll}} class="in" disabled>
+              <label class="sp"></label>
+              <label class="labelp">Price</label>
+              <input type="text" value={{price}} class="in" disabled>  
+                
+          </div>
+          <div class="space1">  
+          </div>       
+          <div class="i">
+              <label class=" label">Seats</label>
+              <div>
+              <div class="column1 buttons">
+              <button   *ngFor="let s of seatss" (change)="selectChangeHandler4($event)" value="{{s.id}}" [disabled]="s.reserved"  onclick="myButtonClicked(this)" (click)="reservingSeat(s.id)" class="but">{{s.ordinal}}</button>
+              
+              
+              </div>
+              <div>
+                <input class="column1 submit" type="submit" value="Ok"  (click)="addReser()">
+              </div>
+              </div>
+              
+          </div>
+        </div>
+
+        
+
+        </form>
+
+      </div>
+  </div>
+
+</div>

@@ -25,7 +25,7 @@ export class CinemalogComponent implements OnInit {
   cinemas: Cinema[];
   repertory: Repertory;
   projections: Projection[];
-  projection: Projection;
+  projectionK: Projection;
   projectiondates: Projectiondate[];
   selectedItem: any;
   projectiondatee: Projectiondate;
@@ -81,8 +81,10 @@ export class CinemalogComponent implements OnInit {
 
   getProjectionDates(): void{
     this.projectionService.getProjectionDate(this.selectedItem)
-    .subscribe(projection => {this.projection=projection;
-    this.projectiondates=this.projection.projectionDates;
+    .subscribe(projectionn => {this.projectionK=projectionn;
+    
+    console.log(this.projectionK.name);
+    this.projectiondates=this.projectionK.projectionDates;
     });
 
     
@@ -90,6 +92,7 @@ export class CinemalogComponent implements OnInit {
 
   selectChangeHandler(event:any){
     this.selectedItem = event.target.value;
+    
     this.projectionterms=[];
     this.hall="";
     this.seats=[];
@@ -103,6 +106,7 @@ export class CinemalogComponent implements OnInit {
     this.projectionService.getProjectionTerm(this.selectedItem2)
     .subscribe(projectiondate => {this.projectiondatee=projectiondate;
     this.datee=this.projectiondatee.date;
+    console.log("bbb"+this.projectiondatee.date);
     console.log("dateeee"+this.datee);
     this.projectionterms=this.projectiondatee.projectionTerms;
     });
@@ -199,7 +203,7 @@ export class CinemalogComponent implements OnInit {
     console.log(this.seatlist);
     this.reservationn.seats=this.seatlist;
     
-    this.reservationn.projectionA=this.projection.name;
+    this.reservationn.projectionA=this.projectionK.name;
     this.reservationn.dateA=this.datee;
     console.log("smarass brt"+this.reservationn.dateA);
     this.projectionService.addReservation(this.reservationn)

@@ -19,6 +19,9 @@ export class AdminsystemComponent implements OnInit {
   selektovanId: any;
   adminsOfCinema: User[];
   administrator: User;
+  
+  latitude = 44.786568;
+  longitude = 20.4489216;
 
   constructor(private adminsystemaService: AdminsystemService,
           private userService: UserService
@@ -58,6 +61,12 @@ export class AdminsystemComponent implements OnInit {
     });
     
   
+  }
+
+  OnChoseLocation(event){
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng;
+
   }
   
  

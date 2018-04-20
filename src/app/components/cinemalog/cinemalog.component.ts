@@ -22,6 +22,7 @@ import { User } from '../../user';
 })
 export class CinemalogComponent implements OnInit {
 
+  cinema: any;
   cinemas: Cinema[];
   repertory: Repertory;
   projections: Projection[];
@@ -62,6 +63,7 @@ export class CinemalogComponent implements OnInit {
   }
 
   getProjections(id): void{
+    this.cinema=id;
     this.projectionService.getRepertory(id)
     .subscribe(repertory => {this.repertory=repertory;
     this.projections = repertory.projections;
@@ -195,17 +197,17 @@ export class CinemalogComponent implements OnInit {
 
   addReser(): void{
     var ua = this.loggedIn.getLocalStore();
-    console.log(ua);
+    
     this.reservationn.user1=ua;
     this.reservationn.projectionterm=this.projectionterm;
+    this.reservationn.cinema=this.cinema;
     
     
-    console.log(this.seatlist);
     this.reservationn.seats=this.seatlist;
     
     this.reservationn.projectionA=this.projectionK.name;
     this.reservationn.dateA=this.datee;
-    console.log("smarass brt"+this.reservationn.dateA);
+    
     this.projectionService.addReservation(this.reservationn)
     .subscribe(data => this.reservationn = data);
     location.reload();

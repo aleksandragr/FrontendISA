@@ -11,4 +11,6 @@ export class Reservation{
     user1: User;
     dateA: any;
     projectionA: any;
+    cinema: number;
+    nameC: string;
 }

@@ -1,8 +1,23 @@
 <div>
 
 
-    <div class="levi">
+    <div *ngIf="u?.role==='user'" class="levi">
 
+
+        <div *ngIf="u?.numberlogin>=this.golddd" class="gold">
+            <p>Name: {{u.name}} <br> Surname: {{u.surname}}</p>
+        </div>
+
+        <div *ngIf="u?.numberlogin<this.golddd" class="silver">
+                <div *ngIf="u?.numberlogin>=this.silverrr">
+                    <p>Name: {{u.name}} <br> Surname: {{u.surname}}</p>
+                </div>
+            </div>
+    
+            <div *ngIf="u?.numberlogin<=this.bronzeee" class="bronze">
+                    <p>Name: {{u.name}} <br> Surname: {{u.surname}}</p>
+            </div>
+    
 
 
     </div>

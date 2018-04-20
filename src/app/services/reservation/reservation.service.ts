@@ -32,4 +32,10 @@ export class ReservationService {
     return this.http.get<any>('http://localhost:4567/reservation/getHistory/'+id);
 
   }
+
+  getInviteFr(id): Observable<any>{
+
+    return this.http.post<any>('http://localhost:4567/reservation/inviteFriends/' + id, id, httpOptions);
+
+  }
 }

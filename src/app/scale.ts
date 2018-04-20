@@ -2,9 +2,9 @@ export class scale{
 
     id: number;
     name: string;
-    gold: number;
-    silver: number;
-    bronze: number;
+    gold: any;
+    silver: any;
+    bronze: any;
 
 
 }

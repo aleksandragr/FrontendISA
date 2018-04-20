@@ -19,7 +19,7 @@
          <button *ngIf="u?.role==='adminS'" class="buttonA"><a [routerLink]="['adminsystem']" style="text-decoration: none">Admin system</a></button>
         </div>
         <div class="pom">
-            <button class="buttonA"><a [routerLink]="['scale']" style="text-decoration: none">Scale</a></button>
+            <button *ngIf="u?.adminFchangep==='yes'" class="buttonA"><a [routerLink]="['scale']" style="text-decoration: none">Scale</a></button>
         </div>
          <button *ngIf="u?.adminFchangep==='yes'" class="buttonN"><a [routerLink]="['notification']" style='text-decoration:none;'>Notification</a></button>
          <button class="buttonL" (click)="logoutFun()">Logout</button>

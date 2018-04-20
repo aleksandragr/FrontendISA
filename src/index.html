@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <script>
+  <script type="text/javascript">
     
     function myButtonClicked(el){
     el.disabled = true; 
@@ -48,6 +48,15 @@
       var btn = document.getElementById("approvebtn");
         btn.disabled = false;
     }
+
+    function PreviewImage() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    };
 
   </script>
 

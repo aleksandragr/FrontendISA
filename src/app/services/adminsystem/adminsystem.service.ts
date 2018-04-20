@@ -32,6 +32,12 @@ export class AdminsystemService {
     return this.Http.get<any>('http://localhost:4567/user/getAdminsOfCinemaT');
 
   }
+
+  addScale(scale): Observable<any>{
+
+    return this.Http.put<any>('http://localhost:4567/scaleprople/addscaleprople', scale, httpOptions);
+
+  }
  
 
 }

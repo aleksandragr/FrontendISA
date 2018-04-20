@@ -1,0 +1,55 @@
+<div>
+
+
+    <div class="levi">
+
+
+
+    </div>
+
+    <div class="space"></div>
+
+    <div *ngIf="u?.role==='adminS'" class="desni">
+
+        <h4 align="center">Add scale</h4>
+        <div class="label">
+            <p>Name:</p>
+          </div>
+          <div class="input">
+            <input class="in" type="text" [(ngModel)]="newScale.name" placeholder="Name" name="name" #namerr>
+          </div>
+
+
+          <div class="label">
+              <p>Gold:</p>
+          </div>
+          <div class="input">
+              <input class="in" type="text" [(ngModel)]="newScale.gold" placeholder="Gold" name="gold" #goldr>
+          </div>
+
+          <div class="label">
+              <p>Silver:</p>
+          </div>
+          <div class="input">
+              <input class="in" type="text" [(ngModel)]="newScale.silver" placeholder="Silver" name="silver" #silverr>
+          </div>
+
+            <div class="label">
+                <p>Bronze:</p>
+              </div>
+              <div class="input">
+                <input class="in" type="text" [(ngModel)]="newScale.bronze" placeholder="Bronze" name="bronze" #bronzer>
+            </div>
+
+
+            <div class="dugmeC">
+                <button class="ok" (click)="addscalee();  namerr.value=''; goldr.value=''; silverr.value='';  bronzer.value='';">Ok</button>
+            </div>
+            
+
+      </div>
+
+
+
+
+</div>

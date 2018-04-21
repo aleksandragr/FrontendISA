@@ -66,7 +66,10 @@ export class AdminsystemComponent implements OnInit {
   OnChoseLocation(event){
     this.latitude = event.coords.lat;
     this.longitude = event.coords.lng;
-
+    this.newCinemaTheatre.longitude = event.coords.lng;
+    this.newCinemaTheatre.latitude =  event.coords.lat;   
+    console.log(this.latitude);
+    console.log(this.longitude);
   }
   
  

@@ -45,6 +45,7 @@ import { AdminsystemComponent } from './components/adminsystem/adminsystem.compo
 import { AdminsystemService } from './services/adminsystem/adminsystem.service';
 import { ScaleComponent } from './components/scale/scale.component';
 import { AgmCoreModule } from '@agm/core';
+import { FriendshipService } from './services/friendship/friendship.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,7 @@ import { AgmCoreModule } from '@agm/core';
     })
   ],
   providers: [CinemaService, TheatreService, UserService,LoggedinService,ThematicpropsService,ProjectionsService,
-    AnnouncementService,BidService,NotificationService,ReservationService,AdminsystemService],
+    AnnouncementService,BidService,NotificationService,ReservationService,AdminsystemService,FriendshipService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,43 @@
 <div>
-    <div>
-        <h1 class="header">List of friends</h1>
+  
+    <div class="levi">
+
+        <div class="friends ex3">
+
+            <div class="friend">
+                <ul *ngFor="let re of friendss">
+                <p>Prijatelj: {{re.name}}    </p>
+               
+                <hr>
+            </ul>
+
+            </div>
+
+        </div>
+
     </div>
-    <hr>
 
-    <div class="row">
 
-      <div class="column left " style="background-color:lightblue;">
+    <div class="space"></div>
 
-        
 
-        
-      </div>
+    <div class="desni">
+
+        <div class="requests  ex3">
+
+            <div class="request">
+                <ul *ngFor="let re of friendships">
+                    <p>Korisnik {{re.userone.name}}  zeli da budete prijatelji  </p>
+                    <button (click)="acceptFriend(re.id)">Accept</button>
+                    <button (click)="declineFriend(re.id)">Decline</button>
+                    <hr>
+                </ul>
+               
+            </div>
+
+
+        </div>
 
 
     </div>
-     
-
 </div>

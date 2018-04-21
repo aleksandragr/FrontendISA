@@ -9,4 +9,6 @@ export class Cinema{
     description: string;
     cinema: string;
     admin: User;
+    longitude: number;
+    latitude: number;
 }

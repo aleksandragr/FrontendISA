@@ -11,8 +11,8 @@ import { TheatreService } from '../../services/theatre/theatre.service';
 export class TheatreComponent implements OnInit {
 
   theatres: Theatre[];
-  latitude = 51.678418;
-  longitude = 7.809007;
+  latitude = 44.787197;
+  longitude = 20.457273;
   
   constructor(private theatreService: TheatreService) { }
 
